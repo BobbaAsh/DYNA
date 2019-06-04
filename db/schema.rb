@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_06_04_085021) do
     t.string "name"
     t.string "localisation"
     t.string "description"
+    t.string "begin_date"
+    t.string "end_date"
   end
 
   create_table "participations", force: :cascade do |t|
