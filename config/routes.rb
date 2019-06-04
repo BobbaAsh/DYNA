@@ -49,6 +49,6 @@ Rails.application.routes.draw do
   resources :status_assignations, only: [:create, :delete]
   resources :task_assignations, only: [:create, :delete]
   resources :documents
-  resources :status, only: [:create, :delete, :update]
+  resources :status, only: [:index, :create, :delete, :update]
   resources :tasks
  end
