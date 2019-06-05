@@ -43,19 +43,11 @@ Rails.application.routes.draw do
   # get 'users/delete'
   devise_for :users
   root to: 'pages#home'
-  resources :users do
-    collection do
-      get :index_manager
-    end
-  end
-
+  resources :users
   resources :events do
-    collection do
-      get :index_manager
-    end
-  end
-  resources :participations, only: [:show, :create]
+   resources :participations, only: [:new, :show, :create]
   resources :status_assignations, only: [:create, :delete]
+
   resources :task_assignations, only: [:create, :delete]
   resources :documents
   resources :status, only: [:index, :create, :delete, :update]
