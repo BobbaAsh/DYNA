@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-12 ">
       <h1>User <%= @user.id %></h1>
-      <p class="text-center"> <%= @user.avatar %> </p>
+      <%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
       <p class="text-center"> <%= "last name : #{@user.last_name}" %> </p>
       <p class="text-center"> <%= "First name : #{@user.first_name}" %> </p>
       <p class="text-center"> <%= "Date of birth : #{@user.date_of_birth}" %> </p>
