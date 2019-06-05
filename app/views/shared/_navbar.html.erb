@@ -23,6 +23,15 @@
           <%= link_to "Create an event", new_event_path, class: "dropdown-item" %>
           <%= link_to "Be a candidate", events_path, class: "dropdown-item" %>
         </div>
+        <div class="log-box"> <% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path) %>
+  </li>
+<% end %></div>
       </li>
     </ul>
   </div>
