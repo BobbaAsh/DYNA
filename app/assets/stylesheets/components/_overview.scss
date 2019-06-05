@@ -1,0 +1,27 @@
+section {
+    padding: 100px 20px;
+}
+
+.overview {
+    text-align: center;
+}
+
+.overview > div > div {
+    float: left;
+    width: 33%;
+    padding: 0 40px 0 40px;
+}
+
+.container2 h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 300;
+}
+
+.overview p {
+    margin-bottom: 0;
+}
+
+div {
+  display: block;
+}

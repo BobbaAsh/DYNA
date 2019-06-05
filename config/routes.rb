@@ -53,3 +53,4 @@ Rails.application.routes.draw do
   resources :status, only: [:index, :create, :delete, :update]
   resources :tasks
  end
+end
