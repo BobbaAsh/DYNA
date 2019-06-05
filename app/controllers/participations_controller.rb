@@ -1,25 +1,28 @@
 class ParticipationsController < ApplicationController
-  # def show
-  #   @participation = Partipation.find(params[:id])
-  # end
+  before_action :authenticate_user!
+  def show
+  end
 
-#   def new
-#     @participation = Partipation.new
-#   end
+  def new
+    @participation = Participation.new
+    @event = Event.find(params[:event_id])
+  end
 
-#   def create
-#     @user = User.find(params[:user_id])
-#     @participation = current_user.participation.build(participation_params)
-#     @participation.user = @user
+  def create
+    @participation = Participation.new(participation_params)
+    @participation.user = current_user
+    @event = Event.find(params[:event_id])
+    @participation.event = @event
+    if @participation.save
+      redirect_to event_path(@participation.event)
+    else
+      render :new
+    end
+  end
 
-#     if @participation.save
-#       redirect_to
-#     else
-#       render :new
-#   end
+  private
 
-#   private
-
-#   def participation_params
-#     params.require(:participation).permit()
-# end
+  def participation_params
+    params.require(:participation).permit(:wanted_status)
+  end
+end
