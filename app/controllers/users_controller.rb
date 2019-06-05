@@ -22,9 +22,14 @@ class UsersController < ApplicationController
   end
 
   def edit
+     @user = User.find(params[:id])
+
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(users_params)
+    redirect_to @user
   end
 
   def delete
@@ -33,7 +38,7 @@ class UsersController < ApplicationController
   private
 
   def users_params
-    params.require(:user).permit(:last_name, :first_name, :date_of_birth, :email, :password, :photo )
+    params.require(:user).permit(:last_name, :first_name, :date_of_birth, :photo, :ss_number, :address, :phone_number, :avatar, :photo_cache)
 
   end
 end
