@@ -1,0 +1,19 @@
+.boutonmenuprincipal {
+border: none;
+cursor: pointer;
+}
+
+.dropdown-child {
+display: none;
+background-color: white;
+}
+
+.dropdown-child a {
+color: black;
+text-decoration: none;
+display: block;
+}
+
+.dropdown:hover .dropdown-child {
+display: block;
+}

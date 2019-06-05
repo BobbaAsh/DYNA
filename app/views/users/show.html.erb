@@ -11,5 +11,9 @@
       <p class="text-center"> <%= "Numeros de securité sociale : #{@user.ss_number}" %></p>
       <p class="text-center"> <%= "Numeros de telephone : #{@user.phone_number}" %> </p>
     </div>
+
+     <p> <a href="./" class="btn btn-sucess">Index</a> </p>
+     <p> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </p>
+     <p> <%= link_to 'edit', edit_user_path, method: :get %> </p>
   </div>
 </div>
