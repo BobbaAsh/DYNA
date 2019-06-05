@@ -1,5 +1,9 @@
 class ParticipationsController < ApplicationController
   before_action :authenticate_user!
+  def index
+    @participations = Participation.all
+  end
+
   def show
   end
 

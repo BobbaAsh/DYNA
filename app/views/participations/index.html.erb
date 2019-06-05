@@ -1,0 +1,12 @@
+<% @participations.each do |participation| %>
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+  <div class="card-product-infos">
+    <div class="clickable">
+    <h2><%= participation.user.first_name && participation.user.last_name %> </h2>
+    <p>Product description with <strong><%= participation.wanted_status %></strong> only.</p>
+  </div>
+</div>
+</div>
+</div>
+<% end %>
