@@ -1,2 +1,21 @@
-<h1>StatusAssignations#new</h1>
-<p>Find me in app/views/status_assignations/new.html.erb</p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 text-center">
+        <h3>Select your favourite sports:</h3>
+        <%= simple_form_for :status_assignations do |f| %>
+        <div class="d-flex flex-wrap justify-content-center pt-4">
+          <label for="sound-engineer" class="clickable">
+            <small>Sound Engineer</small>
+          </label>
+             <%= f.label "sound Engineer" %> <br />
+            <%= f.check_box :id %> <br />
+<!--           <input type="checkbox"  name="Sound Engineer" id="sound-engineer" value="sound engineer" /> -->
+
+          </div>
+        </div>
+      </div>
+            <%= f.submit 'Save' %>
+            <% end %>
+
+    </div>
+  </div>

@@ -3,6 +3,10 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def index_manager
+    @events = current_user.events
+  end
+
   def show
     @event = Event.new
   end
@@ -21,12 +25,18 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
   end
 
   def update
+    @event = Event.find(params[:id])
+    @event.update(event_params)
+    redirect_to @event
   end
 
   def delete
+    @event = Event.find(params[:id])
+    @event.destroy
   end
 
   private

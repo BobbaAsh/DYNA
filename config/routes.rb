@@ -44,11 +44,13 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :users
-  resources :events
-  resources :participations, only: [:show, :create]
+  resources :events do
+   resources :participations, only: [:new, :show, :create]
   resources :status_assignations, only: [:create, :delete]
+
   resources :task_assignations, only: [:create, :delete]
   resources :documents
   resources :status, only: [:index, :create, :delete, :update]
   resources :tasks
  end
+end

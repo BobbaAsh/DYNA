@@ -3,4 +3,55 @@
 @import "avatar";
 @import "navbar";
 @import "footer";
+@import "banner";
+@import "parallax";
+@import "card";
+@import "home-card";
+@import "dropdown";
 @import "card-product";
+@import "clickable";
+@import "notice";
+@import "pricing";
+@import "overview";
+@import "home";
+
+.text-center h1 {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.artist-text-center {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.text-center {
+  margin-bottom: 20px;
+}
+
+.container {
+  justify-content: center;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.typo {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 1px;
+  color: #373738;
+  font-weight: 700;
+}
+
+.label {
+  margin-bottom: 5px;
+}
