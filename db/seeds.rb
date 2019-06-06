@@ -21,3 +21,16 @@
 
 end
 puts 'Finished!'
+
+puts 'Creating 5 fake events...'
+5.times do
+ event = Event.create!(
+  name: Faker::Name.last_name,
+  localisation: "Marseille",
+  description: "eee",
+  begin_date: Faker::Date.birthday,
+  end_date: Faker::Date.birthday
+  )
+end
+puts 'Finished!'
+
