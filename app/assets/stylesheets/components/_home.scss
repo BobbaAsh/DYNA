@@ -1,0 +1,49 @@
+.home .container1 {
+    position: relative;
+    top: 48%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.container1 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+div {
+    display: block;
+}
+
+.home h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+}
+
+
+.home h1 {
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+}
+
+.home {
+    background: #eaeaea;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+}
+
+
