@@ -13,11 +13,12 @@
 .btn1 {
     display: inline-block;
     padding: 15px 30px;
-    border-radius: 50px;
-    color: black;
-    border: 2px solid black;
+    border-radius: 3px;
+    color: #c6ba95;
+    border: 2px solid #c6ba95;
     transition: 200ms;
     background: transparent;
+    opacity: 30%;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
