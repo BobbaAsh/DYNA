@@ -4,7 +4,7 @@
   <div class="card-product-infos">
     <h2><%= event.name %> </h2>
     <p>Event in <strong><%= event.localisation %></strong> only.</p>
-      <%= link_to "Candidate", class: "btn btn-dark" %>
+     <%= link_to "Candidate", event_path(event.id), class:"btn btn-dark" %>
   </div>
   <% end %>
 </div>
