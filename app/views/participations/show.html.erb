@@ -4,6 +4,13 @@
       <h1 class="artist-text-center">Participation <%= @participation.event.name %></h1>
       <p class="text-center"> <%= "Du: #{@participation.event.begin_date}" %> </p>
       <p class="text-center"> <%= "Au: #{@participation.event.end_date}" %> </p>
+      <p class="text-center"> <%= "Post demander: #{@participation.wanted_status}" %> </p>
+      <p class="text-center"> <%= "Status : #{@participation.status}" %> </p>
+      <% if @participation.status == true %>
+     <p> "Accepter" </p>
+      <%else%> <p> "En Attente" </p>
+
+    <% end %>
     </div>
   </div>
 </div>
