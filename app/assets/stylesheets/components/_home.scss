@@ -37,7 +37,7 @@ div {
 }
 
 .home {
-    background: #eaeaea;
+    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url("http://i.huffpost.com/gen/1658988/images/o-BURNING-MAN-NEVADA-facebook.jpg");
     height: 80vh;
     overflow: hidden;
     position: relative;
@@ -46,4 +46,13 @@ div {
     padding: 150px 0;
 }
 
+.benevole {
+    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url("https://pbs.twimg.com/media/DlOvWjRUwAA3LoG.jpg");
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+}
 
