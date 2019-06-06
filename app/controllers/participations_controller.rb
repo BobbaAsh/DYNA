@@ -1,10 +1,12 @@
 class ParticipationsController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @participations = Participation.all
   end
 
   def show
+    @participation = Participation.find(params[:id])
   end
 
   def new
