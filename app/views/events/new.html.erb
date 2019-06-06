@@ -1,0 +1,8 @@
+<%= simple_form_for(@event) do |f| %>
+ <%= f.input :name, placeholder: "Name" %>
+ <%= f.input :begin_date, placeholder: "Begin Date" %>
+ <%= f.input :end_date, placeholder: "End Date" %>
+ <%= f.input :localisation, placeholder: "Localisation" %>
+  <%= f.input :description, placeholder: "Description " %>
+ <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>

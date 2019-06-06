@@ -1,2 +1,23 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+
+<div>
+  <div class="container">
+    <h1 class="artist-text-center">Users</h1>
+
+    <div class="col-lg-12 cards">
+    <% @users.each do |user| %>
+      <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+          <h2 class="card-text"> <%= user.first_name %></h2>
+          <p class="card-text"> <%= user.last_name %></p>
+          <h3 class="card-text"> <%= user.date_of_birth %></h3>
+          <%= link_to "Details", user_path(user), class: "btn btn-info" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="text-center">
+
+  </div>
+</div>
