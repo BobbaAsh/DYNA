@@ -1,0 +1,17 @@
+<% @participations.each do |participation| %>
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+  <div class="card-product-infos">
+    <div class="clickable">
+    <h2><%= participation.user.first_name && participation.user.last_name %> </h2>
+    <p> <strong><%= participation.wanted_status %></strong> </p>
+<%= form_for @participations do |fa| %>
+  <%= fa.hidden_field :status  %>
+  <%= fa.submit "Approve", class: "btn btn-large btn-success",:status = true %>
+  <%= fa.submit "Reject", class: "btn btn-large btn-danger", :status = false %>
+<% end %>
+  </div>
+</div>
+</div>
+</div>
+<% end %>
