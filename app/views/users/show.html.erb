@@ -1,6 +1,7 @@
 <div class="container-fullscreen">
   <div class="container4">
     <div class="row">
+      <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill, class: "image" %>
       <div class="col-lg-12">
         <p class="information-title">Name</p>
         <p class="information"> <%= @user.first_name %> <%=  @user.last_name %> </p>
@@ -13,7 +14,7 @@
         <p class="information-title">Numéro de Sécurité Sociale</p>
         <p class="information"> <%= @user.ss_number %> </p>
       </div>
-      <div class="col-lg-12">
+      <div class="row">
         <a href="./" class="btn btn-info">Index</a>
         <%= link_to 'Modifier', edit_user_path, method: :get, class: "btn btn-info" %>
       </div>
