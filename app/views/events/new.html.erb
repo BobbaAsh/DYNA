@@ -1,8 +1,12 @@
-<%= simple_form_for(@event) do |f| %>
- <%= f.input :name, placeholder: "Name" %>
- <%= f.input :begin_date, placeholder: "Begin Date" %>
- <%= f.input :end_date, placeholder: "End Date" %>
- <%= f.input :localisation, placeholder: "Localisation" %>
-  <%= f.input :description, placeholder: "Description " %>
- <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<div class="container-fullscreen">
+  <div class="container">
+    <%= simple_form_for(@event) do |f| %>
+    <%= f.input :name, label: "Nom de l'évènement", placeholder: "Nom" %>
+    <%= f.input :begin_date, label: "Date de début", placeholder: "jj/mm/aaaa" %>
+    <%= f.input :end_date, label: "Date de fin", placeholder: "jj/mm/aaaa" %>
+    <%= f.input :localisation, label: "Localisation", placeholder: "Adresse" %>
+    <%= f.input :description, label: "Description", placeholder: "En quoi consiste ton évènement" %>
+    <%= f.button :submit, class: "btn btn-info" %>
+    <% end %>
+  </div>
+</div>

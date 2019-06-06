@@ -1,6 +1,6 @@
 <%= simple_form_for(@task) do |f| %>
-  <%= f.input :description, placeholder: "Description " %>
- <%= f.input :begin_date, placeholder: "Begin Date" %>
- <%= f.input :end_date, placeholder: "End Date" %>
+  <%= f.input :description, label: "Description", placeholder: "Description " %>
+ <%= f.input :begin_date, label: "Date de début", placeholder: "jj/mm/aaaa" %>
+ <%= f.input :end_date, label: "Date de fin", placeholder: "jj/mm/aaaa" %>
  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
