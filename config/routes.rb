@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users
   resources :events do
-   resources :participations, only: [:new, :show, :create]
+   resources :participations, only: [:index, :new, :show, :create]
  end
   resources :status_assignations, only: [:create, :delete]
 

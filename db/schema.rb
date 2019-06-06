@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_134330) do
+ActiveRecord::Schema.define(version: 2019_06_06_110221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_134330) do
     t.string "user_id"
     t.string "event_id"
     t.string "wanted_status"
+    t.boolean "status"
   end
 
   create_table "status_assignations", force: :cascade do |t|

@@ -1,5 +1,9 @@
 class ParticipationsController < ApplicationController
   before_action :authenticate_user!
+  def index
+    @participations = Participation.all
+  end
+
   def show
   end
 
@@ -14,7 +18,7 @@ class ParticipationsController < ApplicationController
     @event = Event.find(params[:event_id])
     @participation.event = @event
     if @participation.save
-      redirect_to event_path(@participation.event)
+      redirect_to event_participations_path
     else
       render :new
     end
@@ -23,6 +27,6 @@ class ParticipationsController < ApplicationController
   private
 
   def participation_params
-    params.require(:participation).permit(:wanted_status)
+    params.require(:participation).permit(:wanted_status, :status)
   end
 end

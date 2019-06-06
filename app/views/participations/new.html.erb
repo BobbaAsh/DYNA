@@ -2,7 +2,7 @@
     <div class="row justify-content-center">
       <div class="col-sm-8 text-center">
         <h3>Select your wanted job:</h3>
-        <%= simple_form_for [@event, @participation] do |f| %>
+          <%= simple_form_for [@event, @participation] do |f| %>
           <%= f.input :wanted_status, collection: ["Gate" , "Trash", "PR", "Driver"] %>
           <%= f.button :submit %>
           <% end %>
