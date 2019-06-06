@@ -1,0 +1,15 @@
+<div class="container pad20" style="width:60%; margin-top: 30px; margin-bottom: 30px;" >
+  <div class="row">
+    <div class="col-lg-12 ">
+      <h1 class="artist-text-center">Participation <%= @participation.event.name %></h1>
+      <p class="text-center"> <%= "Du: #{@participation.event.begin_date}" %> </p>
+      <p class="text-center"> <%= "Au: #{@participation.event.end_date}" %> </p>
+    </div>
+  </div>
+</div>
+<%= link_to "Document", documents_path %>
+</div>
+
+<div class="text-center">
+  <%= link_to "Back", user_path, class: "btn btn-info" %>
+</div>

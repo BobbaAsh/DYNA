@@ -1,6 +1,8 @@
 class ParticipationsController < ApplicationController
   before_action :authenticate_user!
+
   def show
+    @participation = Participation.find(params[:id])
   end
 
   def new
