@@ -9,3 +9,4 @@ const clickable = () => elements.forEach((element) => {
 });
 
 export { clickable };
+

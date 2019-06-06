@@ -3,27 +3,10 @@
     <div class="container1">
     <h1>Dyna, organise ton event sans la partie relou</h1>
     <h2>Dynamise la manière d'organiser un évènement</h2>
-    <%= link_to "Rejoins-nous", "#", class: "btn btn-info" %>
+    <%= link_to "Rejoins-nous", "#", class: "btn1 btn-info" %>
     </div>
   </section>
-
-  <section class="overview">
-    <div class="container2">
-      <div>
-        <h2>Organise</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div>
-        <h2>Invite</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div>
-        <h2>Assigne</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-  </section>
-  <div class="parallax">
+  <!-- <div class="parallax">
     <div class="container">
       <h2 class="little-banner">Ce qu'ils en ont pensé</h2>
           <div class="home-cards">
@@ -65,7 +48,53 @@
             </div>
           </div>
     </div>
+  </div> -->
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <h3>"I love you the more in that I believe you had</h3>
+      <h3>liked me for my own sake and for nothing else"</h3>
+      <p class="author">- John Keats</p>
+    </div>
+
+    <div class="mySlides">
+      <h3>"But man is not made for defeat. </h3>
+      <h3>A man can be destroyed but not defeated."</h3>
+      <p class="author">- Ernest Hemingway</p>
+    </div>
+
+    <div class="mySlides">
+      <h3>"I have not failed. </h3>
+      <h3>I've just found 10,000 ways that won't work."</h3>
+      <p class="author">- Thomas A. Edison</p>
+    </div>
+
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
+  <section class="overview">
+    <div class="container2">
+      <div>
+        <h2>Organise</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div>
+        <h2>Invite</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div>
+        <h2>Assigne</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </section>
+    <section class="benevole">
+    <div class="container1">
+    <h1>Deviens bénévole et participe au festival</h1>
+    <h2>Obtiens ton billet gratuit en échange de travail sur le lieu du festival</h2>
+    <%= link_to "Postule", "#", class: "btn1 btn-info" %>
+    </div>
+  </section>
   <div>
     <section class="pricing">
         <h1>Nos prix</h1>
@@ -107,4 +136,46 @@
       </div>
     </section>
   </div>
+  <div>
+    <section class="contact">
+      <h1>Contactez-nous</h1>
+      <h2>Si vous avez des questions intelligentes</h2>
+      <div class="container">
+          <form>
+              <label class="input"><span>Name</span><input type="text" name="name" required></label>
+              <label class="input"><span>Email Address</span><input type="email" name="email" required></label>
+              <label class="message"><span>Message</span><textarea name="message" required></textarea></label>
+              <label class="submit"><a href="#" class="btn">Send Message<i class="fa fa-angle-right"></i></a></label>
+          </form>
+      </div>
+    </section>
 </div>
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
