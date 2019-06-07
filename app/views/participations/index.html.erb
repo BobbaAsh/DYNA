@@ -4,15 +4,17 @@
   <div class="card-product-infos">
     <h2><%= participation.user.first_name && participation.user.last_name %> </h2>
     <p> <strong><%= participation.wanted_status %></strong> </p>
+
     <%= simple_form_for "participation" do |f| %>
     <%= f.label  "Accept" %>
     <%= f.input :status, :input_html => {value: true}, as: :hidden %>
     <%= f.button :submit, class: "btn btn-large btn-success"  %>
     <% end %>
-    <%= simple_form_for "participation" do |f| %>
+   <!--  <%= simple_form_for "participation" do |f| %>
     <%= f.input :status, :input_html => {value: false}, as: :hidden %>
-    <%= f.button :submit, class: "btn btn-large btn-danger" %>
-    <% end %>
+    <%= f.button :submit, class: "btn btn-large btn-danger" %> -->
+<!--     <% end %> -->
+
   </div>
 </div>
 </div>
