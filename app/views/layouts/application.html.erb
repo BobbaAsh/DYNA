@@ -11,7 +11,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <header><%= render "shared/navbar" %></header>
+    <%= render "shared/navbar" %>
     <% if notice %>
     <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
       <span>Congratulations</span>
@@ -23,6 +23,6 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-       <footer><%= render "shared/footer" %></footer>
+    <%= render "shared/footer" %>
   </body>
 </html>
