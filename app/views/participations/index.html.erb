@@ -1,22 +1,23 @@
+
 <div class="container-fullscreen">
   <div class="container1">
-  <% @participations.each do |participation| %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
-      <div class="card-product-infos">
-        <h2><%= participation.user.first_name && participation.user.last_name %> </h2>
-        <p> <strong><%= participation.wanted_status %></strong> </p>
-        <%= simple_form_for "participation" do |f| %>
-        <%= f.label  "Accept" %>
-        <%= f.input :status, :input_html => {value: true}, as: :hidden %>
-        <%= f.button :submit, class: "btn btn-large btn-success"  %>
-        <% end %>
-        <%= simple_form_for "participation" do |f| %>
-        <%= f.input :status, :input_html => {value: false}, as: :hidden %>
-        <%= f.button :submit, class: "btn btn-large btn-danger" %>
-        <% end %>
+    <% @participations.each do |participation| %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+        <div class="card-product-infos">
+          <h2><%= participation.user.first_name && participation.user.last_name %> </h2>
+          <p> <strong><%= participation.wanted_status %></strong> </p>
+          <%= simple_form_for "participation" do |f| %>
+          <%= f.label  "Accept" %>
+          <%= f.input :status, :input_html => {value: true}, as: :hidden %>
+          <%= f.button :submit, class: "btn btn-large btn-success"  %>
+          <% end %>
+          <%= simple_form_for "participation" do |f| %>
+          <%= f.input :status, :input_html => {value: false}, as: :hidden %>
+          <%= f.button :submit, class: "btn btn-large btn-danger" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   </div>
 </div>
