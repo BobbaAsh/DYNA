@@ -50,7 +50,10 @@ Rails.application.routes.draw do
       patch :accept
       patch :decline
     end
-   end
+    collection do
+    get :index_manager
+    end
+  end
  end
   resources :status_assignations, only: [:create, :delete]
 
