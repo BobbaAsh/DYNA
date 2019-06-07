@@ -46,6 +46,9 @@ Rails.application.routes.draw do
   resources :users
   resources :events do
    resources :participations, only: [:index, :new, :show, :create]
+   collection do
+    get :index_manager
+  end
  end
   resources :status_assignations, only: [:create, :delete]
 
