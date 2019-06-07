@@ -1,3 +1,35 @@
+<% if user_signed_in? %>
+<div>
+  <section class="home">
+    <div class="container1">
+    <h1>Bonjour Chloé,</h1>
+    <h2>Gère les updates depuis ta dernière connexion</h2>
+    <%= link_to "Voir les changements", "#", class: "btn1 btn-info" %>
+    </div>
+  </section>
+  <section class="infoevent">
+    <div class="container">
+      <h2>Évènement en cours</h2>
+      <h1>Faker Fest</h1>
+      <a href="#" class="btn">Accéder à l'évènement  <i class="fa fa-angle-right"></i></a>
+    </div>
+  </section>
+  <section class="contact">
+    <h1>Contactez-nous</h1>
+    <h2>Si vous avez des questions intelligentes</h2>
+    <div class="container">
+        <form>
+            <label class="input"><span>Nom complet</span><input type="text" name="name" required></label>
+            <label class="input"><span>Email</span><input type="email" name="email" required></label>
+            <label class="message"><span>Message</span><textarea name="message" required></textarea></label>
+            <label class="submit"><a href="#" class="btn">Envoie ton message  <i class="fa fa-angle-right"></i></a></label>
+        </form>
+    </div>
+  </section>
+</div>
+
+<% else %>
+
 <div>
   <section class="home">
     <div class="container1">
@@ -6,66 +38,23 @@
     <%= link_to "Rejoins-nous", "#", class: "btn1 btn-info" %>
     </div>
   </section>
-  <!-- <div class="parallax">
-    <div class="container">
-      <h2 class="little-banner">Ce qu'ils en ont pensé</h2>
-          <div class="home-cards">
-            <div class="home-card">
-              <h4>Review 1</h4>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="home-card">
-              <h4>Review 2</h4>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="home-card">
-              <h4>Review 3</h4>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="home-card">
-              <h4>Review 4</h4>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-    </div>
-  </div> -->
   <div class="slideshow-container">
     <div class="mySlides">
-      <h3>"I love you the more in that I believe you had</h3>
-      <h3>liked me for my own sake and for nothing else"</h3>
-      <p class="author">- John Keats</p>
+      <h3>"Tout est centralisé, tous mes prestataires </h3>
+      <h3>ont joué le jeu Dyna, incroyable et sans stress"</h3>
+      <p class="author">- Christine Leclerc, Gross boite d'event marseille</p>
     </div>
 
     <div class="mySlides">
-      <h3>"But man is not made for defeat. </h3>
-      <h3>A man can be destroyed but not defeated."</h3>
-      <p class="author">- Ernest Hemingway</p>
+      <h3>"Simple à utiliser et efficace, peu importe </h3>
+      <h3>le document demandé, il est facilement téléchargeable"</h3>
+      <p class="author">- Patrick Gauvin, La Provence</p>
     </div>
 
     <div class="mySlides">
-      <h3>"I have not failed. </h3>
-      <h3>I've just found 10,000 ways that won't work."</h3>
-      <p class="author">- Thomas A. Edison</p>
+      <h3>"J'ai distribué des prospectus deux samedis de suite</h3>
+      <h3>pour pouvoir obtenir mon ticket pour Marsatac, trop hâte!"</h3>
+      <p class="author">- Sang chaud</p>
     </div>
 
     <!-- Next/prev buttons -->
@@ -76,15 +65,15 @@
     <div class="container2">
       <div>
         <h2>Organise</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Simplifie l'organisation de ton évènement en ajoutant la date, le lieu et la capacité de celui-ci. Cette étape consiste en l'élaboration de la vitrine de ton évènement. Les images et descriptifs choisis impacteront l'intêret des prestataires pour ton évènement.</p>
       </div>
       <div>
-        <h2>Invite</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2>Contacte</h2>
+        <p>Grâce à ta base de donnée enregistrée dans ton. profil Dyna, contacte les prestataires dont tu auras besoin de manière simplifiée. Envoie les contrats simplement via l'application. Une fois les devis acceptés, tout sera stocké sur Dyna afin de centraliser tous les papiers.</p>
       </div>
       <div>
         <h2>Assigne</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Dans le besoin d'aide supplémentaire pour ton évènement? Poste des annonces de candidatures bénévoles, des volontaires seront ravis d'apporter leur aide en échange de leur droit d'entrée pour ton festival.</p>
       </div>
     </div>
   </section>
@@ -104,32 +93,31 @@
           <h3>Free</h3>
           <div class="price">0€</div>
           <ul>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
+            <li>Évènement privé</li>
+            <li>Gère les tâches de chacun</li>
+            <li>Droit d'accès pour tous</li>
           </ul>
           <a class="btn btn-info" href="#">Commencez</a>
         </div>
         <div>
           <h3>Standard</h3>
-          <div class="price">20€</div>
+          <div class="price">sur devis</div>
           <ul>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
+            <li>Évènement public</li>
+            <li>Gérèz vos prestataires via Dyna</li>
+            <li>Centralisation des contacts</li>
+            <li>Centralisation des contrats et devis</li>
           </ul>
           <a class="btn btn-info" href="#">Commencez</a>
         </div>
         <div>
           <h3>Premium</h3>
-          <div class="price">50€</div>
+          <div class="price">sur devis</div>
           <ul>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
-            <li>Consectetur adipiscing</li>
+            <li>évènement public</li>
+            <li>Dyna gère l'app pour vous</li>
+            <li>App mobile pour l'event</li>
+            <li>Beaucoup de choses en plus</li>
           </ul>
           <a class="btn btn-info" href="#">Commencez</a>
         </div>
@@ -179,3 +167,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+<% end %>
