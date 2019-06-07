@@ -2,6 +2,7 @@ class ParticipationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @event = Event.find(params[:event_id])
     @participations = Participation.all
   end
 
@@ -12,6 +13,22 @@ class ParticipationsController < ApplicationController
   def new
     @participation = Participation.new
     @event = Event.find(params[:event_id])
+  end
+
+  def accept
+    @event = Event.find(params[:event_id])
+    @participation = Participation.find(params[:id])
+    @participation.status = true
+    @participation.save
+    redirect_to event_participations_path
+  end
+
+  def decline
+    @event = Event.find(params[:event_id])
+    @participation = Participation.find(params[:id])
+    @participation.status = false
+    @participation.save
+    redirect_to event_participations_path
   end
 
   def create
