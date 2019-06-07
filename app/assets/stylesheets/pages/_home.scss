@@ -1,4 +1,23 @@
-.pricing{
+.pricing h1 {
+  padding-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  line-height: 30px;
+  color: #555;
+  font-weight: 700;
+}
+
+.pricing h2 {
+  padding-bottom: 20px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  line-height: 30px;
+  color: #555;
+  font-weight: 300;
+}
+
+.pricing {
     text-align: center;
 }
 .pricing > div > div{
@@ -184,4 +203,10 @@
     .contact label:first-of-type{
         padding-top: 0;
     }
+}
+
+.infoevent {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }

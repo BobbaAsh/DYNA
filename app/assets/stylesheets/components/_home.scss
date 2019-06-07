@@ -23,6 +23,7 @@ div {
     margin: 0 0 20px 0;
     position: relative;
     z-index: 6;
+    color: white;
 }
 
 
@@ -34,10 +35,11 @@ div {
     margin: 0 0 20px 0;
     position: relative;
     z-index: 6;
+    color: white;
 }
 
 .home {
-    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url("http://i.huffpost.com/gen/1658988/images/o-BURNING-MAN-NEVADA-facebook.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("http://i.huffpost.com/gen/1658988/images/o-BURNING-MAN-NEVADA-facebook.jpg");
     height: 80vh;
     overflow: hidden;
     position: relative;
@@ -47,7 +49,7 @@ div {
 }
 
 .benevole {
-    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url("https://pbs.twimg.com/media/DlOvWjRUwAA3LoG.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("https://pbs.twimg.com/media/DlOvWjRUwAA3LoG.jpg");
     height: 80vh;
     overflow: hidden;
     position: relative;
@@ -56,6 +58,28 @@ div {
     padding: 150px 0;
 }
 
+.benevole h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: white;
+}
+
+
+.benevole h1 {
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: white;
+}
 
 .container-fullscreen {
   min-height: calc(100vh - 210px);
