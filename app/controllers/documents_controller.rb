@@ -1,8 +1,10 @@
 class DocumentsController < ApplicationController
   def index
+    @documents = Document.all
   end
 
   def show
+    @document = Document.find(params[:id])
   end
 
   def new
@@ -10,19 +12,20 @@ class DocumentsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @document = current_user.partiipation.document.build(documents_params)
-    @document.user = @user
-
+    @participation = Participation.find(params[:participation_id])
+    @document = Document.new(documents_params)
+    @document.participation= @participation
+    @document.save
     if @document.save
-      redirect_to document_path(@document)
+      redirect_to participation_path(@document)
     else
     render :new
     end
+
   end
 
   def edit
-    @rdocument = Document.find(params[:id])
+    @document = Document.find(params[:id])
   end
 
   def update
@@ -31,9 +34,11 @@ class DocumentsController < ApplicationController
   def delete
   end
 
+
 private
 
   def documents_params
-    params.require(:document).permit(:name, :url)
+    params.require(:document).permit(:name, :url, :photo)
+    # params.require(:user).permit()
   end
 end
