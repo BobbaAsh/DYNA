@@ -3,7 +3,7 @@ class ParticipationsController < ApplicationController
 
   def index
     @event = Event.find(params[:event_id])
-    @participations = Participation.all
+    @participations = Participation.where(event_id: @event.id)
 
   end
 
