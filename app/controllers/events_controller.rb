@@ -19,7 +19,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user_id = current_user.id
     if @event.save
-      redirect_to event_path(@event)
+      redirect_to index_manager_events_path(current_user)
     else
       render :new
     end
