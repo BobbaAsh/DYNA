@@ -9,6 +9,7 @@ class ParticipationsController < ApplicationController
 
   def show
     @participation = Participation.find(params[:id])
+
   end
 
   def new
@@ -38,7 +39,8 @@ class ParticipationsController < ApplicationController
     @event = Event.find(params[:event_id])
     @participation.event = @event
     if @participation.save
-      redirect_to event_participations_path
+
+      redirect_to event_participation_path(params[:event_id], @participation.id)
     else
       render :new
     end
