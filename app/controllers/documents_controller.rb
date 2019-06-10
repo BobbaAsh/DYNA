@@ -5,19 +5,21 @@ class DocumentsController < ApplicationController
 
   def show
     @document = Document.find(params[:id])
+    @participation = Participation.find(params[:participation_id])
   end
 
   def new
     @document = Document.new
+    @participation = Participation.find(params[:participation_id])
   end
 
   def create
     @participation = Participation.find(params[:participation_id])
     @document = Document.new(documents_params)
-    @document.participation= @participation
-    @document.save
+    @document.participation_id = @participation.id
+
     if @document.save
-      redirect_to participation_path(@document)
+      redirect_to event_participations_path(@document)
     else
     render :new
     end
@@ -38,7 +40,7 @@ class DocumentsController < ApplicationController
 private
 
   def documents_params
-    params.require(:document).permit(:name, :url, :photo)
+    params.require(:document).permit(:name, :url, :photo, )
     # params.require(:user).permit()
   end
 end

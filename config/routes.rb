@@ -43,7 +43,9 @@ Rails.application.routes.draw do
   # get 'users/delete'
   devise_for :users
   root to: 'pages#home'
+
   resources :users
+
   resources :events do
     collection do
         get :index_manager
@@ -55,18 +57,18 @@ Rails.application.routes.draw do
         patch :decline
       end
 
-
-      resources :documents, only: [:new, :create, :show]
     end
-   end
+
+  end
+
+  resources :participations, only: [] do
+    resources :documents, only: [:new, :create, :show ]
+  end
 
 
-
-
-
-resources :status_assignations, only: [:create, :delete]
-resources :task_assignations, only: [:create, :delete]
-resources :status, only: [:index, :create, :delete, :update]
-resources :tasks
+  resources :status_assignations, only: [:create, :delete]
+  resources :task_assignations, only: [:create, :delete]
+  resources :status, only: [:index, :create, :delete, :update]
+  resources :tasks
 
 end

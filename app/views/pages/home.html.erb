@@ -14,6 +14,27 @@
       <a href="#" class="btn">Accéder à l'évènement  <i class="fa fa-angle-right"></i></a>
     </div>
   </section>
+
+  <section class="listevent">
+    <div class="container" >
+     <div class="row">
+      <h1 class="artist-text-center">Mes participations</h1>
+    <div class="col-lg-12 cards">
+    <% @participations.each  do |participation| %>
+        <div class="card-body">
+          <h2 class="card-text"> <%= participation.id %></h2>
+           <p class="card-text"> Statut:<%= participation.status %></p>
+           <% participation.documents.each do |document| %>
+              <%= document.name %>
+              <%= cl_image_tag document.photo, height: 300, width: 400, crop: :fill %>
+            <% end %>
+        </div>
+    <% end %>
+    </div>
+
+    </div>
+  </section>
+
   <section class="contact">
     <h1>Contactez-nous</h1>
     <h2>Si vous avez des questions intelligentes</h2>
