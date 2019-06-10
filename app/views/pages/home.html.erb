@@ -17,23 +17,28 @@
 
   <section class="listevent">
     <div class="container" >
-     <div class="row">
-      <h1 class="artist-text-center">Mes participations</h1>
-    <div class="col-lg-12 cards">
-    <% @participations.each  do |participation| %>
-        <div class="card-body">
-          <h2 class="card-text"> <%= participation.id %></h2>
-           <p class="card-text"> Statut:<%= participation.status %></p>
-           <% participation.documents.each do |document| %>
-              <%= document.name %>
-              <%= cl_image_tag document.photo, height: 300, width: 400, crop: :fill %>
-            <% end %>
-        </div>
-    <% end %>
-    </div>
+      <h1 >Mes participations</h1>
 
+
+        <% @participations.each  do |participation| %>
+        <div class = "row">
+        <div class= "">
+          <h2 class="card-text"> <%= participation.event.name %></h2>
+          <br/>
+           <p class="card-text"> Statut:<%= participation.status %></p>
+        </div>
+        <div class="row d-flex justify-content-between ">
+           <% participation.documents.each do |document| %>
+              <div class ="card ">
+              <%= document.name %>
+              <%= cl_image_tag document.photo, height: 250, width: 250, crop: :fill %>
+              </div>
+             <% end %>
+        <% end %>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="contact">
     <h1>Contactez-nous</h1>
