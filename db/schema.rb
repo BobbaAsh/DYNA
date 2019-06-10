@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2019_06_10_132719) do
+=======
 ActiveRecord::Schema.define(version: 2019_06_10_095249) do
+>>>>>>> 552d86751225538c5032dd6ec2fb242c6730cd60
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +38,12 @@ ActiveRecord::Schema.define(version: 2019_06_10_095249) do
     t.string "begin_date"
     t.string "end_date"
     t.bigint "user_id"
+<<<<<<< HEAD
+    t.float "latitude"
+    t.float "longitude"
+=======
     t.string "photo"
+>>>>>>> 552d86751225538c5032dd6ec2fb242c6730cd60
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
