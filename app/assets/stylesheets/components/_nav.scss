@@ -1,0 +1,39 @@
+.nav {
+  height: 60px;
+  justify-content: space-around;
+  text-decoration: none;
+  color: black;
+
+}
+
+#nav-home {
+  display: flex;
+  margin: 50px;
+}
+
+#nav-home h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#nav-home h4 {
+  font-size: 16px;
+  color: #4c4c4c;
+}
+
+#nav-home p {
+  font-size: 16px;
+  color: #4c4c4c;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding-right: 50px;
+  margin: 30px;
+}
+
+// .tab-content {
+//   justify-content: center;
+//   display: flex;
+// }
