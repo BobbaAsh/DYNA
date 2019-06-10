@@ -1,0 +1,18 @@
+<div class="container-fullscreen">
+  <div class="container1">
+    <% @events.each do |event| %>
+    <div class="card-product">
+      <img src="https://static.mmzstatic.com/wp-content/uploads/2015/01/benevole-festival-musique-temoignage.jpg">
+      <div class="card-info">
+        <div class="card-product-infos">
+          <h2><%= event.name %> </h2>
+          <p><strong><%= event.localisation %></strong>.</p>
+        </div>
+        <div class="row">
+          <%= link_to "Voir", event_path(event.id), class: "btn btn-info" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

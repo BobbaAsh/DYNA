@@ -1,13 +1,21 @@
 <div class="container-fullscreen">
+  <section class="home">
+    <div class="container1">
+      <h1><%= @event.name %> </h1>
+    </div>
+  </section>
   <div class="container pad20" style="width:60%; margin-top: 30px; margin-bottom: 30px;" >
     <div class="row">
       <div class="col-lg-12 ">
-        <h1 class="text-center"><%= @event.name %> </h1>
         <p class="text-center"> <%= "Begin Date: #{@event.begin_date}" %> </p>
         <p class="text-center"> <%= "End Date: #{@event.end_date}" %> </p>
         <p class="text-center"> <%= "Description: #{@event.description}" %> </p>
         <p class="text-center"> <%= "Localisation: #{@event.localisation}" %> </p>
+        <% if current_user.job == "Bénévole" %>
         <p class="text-center"> <%= link_to "Candidater", new_event_participation_path(@event), class: "btn btn-info" %> </p>
+        <% else %>
+        <p class="text-center"> <%= link_to "Voir les candidatures", event_participations_path(@event), class: "btn btn-info" %> </p>
+        <% end %>
       </div>
     </div>
   </div>

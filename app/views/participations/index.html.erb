@@ -1,20 +1,29 @@
+
 <div class="container-fullscreen">
-  <% @participations.each do |participation| %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
-      <div class="card-product-infos">
-        <h2><%= participation.user.first_name && participation.user.last_name %> </h2>
-        <p> <strong><%= participation.wanted_status %></strong> </p>
-        <%= simple_form_for "participation" do |f| %>
-        <%= f.label  "Accept" %>
-        <%= f.input :status, :input_html => {value: true}, as: :hidden %>
-        <%= f.button :submit, class: "btn btn-large btn-success"  %>
-        <% end %>
-        <%= simple_form_for "participation" do |f| %>
-        <%= f.input :status, :input_html => {value: false}, as: :hidden %>
-        <%= f.button :submit, class: "btn btn-large btn-danger" %>
-        <% end %>
+  <div class="container1">
+    <% @participations.sort_by{|participation| participation.id}.each do |participation| %>
+      <div class="card-product">
+        <img src="https://static.mmzstatic.com/wp-content/uploads/2015/01/benevole-festival-musique-temoignage.jpg">
+        <div class="card-info">
+          <div class="card-product-infos">
+            <h3><%= @event.name %></h3>
+            <h4><%= link_to "#{participation.user.first_name}", user_path(participation.user) %></h4>
+            <p><%= participation.wanted_status %></p>
+          </div>
+          <div class="row">
+            <% if participation.status == true %>
+              <%= link_to "Acceptée", accept_event_participation_path(@event, participation), method: :patch,  class: "btn3" %>
+            <% else %>
+              <%= link_to "Accepter", accept_event_participation_path(@event, participation), method: :patch,  class: "btn btn-success" %>
+            <% end %>
+            <% if participation.status == false %>
+              <%= link_to "Refusée", decline_event_participation_path(@event, participation), method: :patch, class: "btn4" %>
+            <% else %>
+              <%= link_to "Refuser", decline_event_participation_path(@event, participation), method: :patch, class: "btn btn-danger" %>
+            <% end %>
+          </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

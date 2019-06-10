@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_06_110221) do
+ActiveRecord::Schema.define(version: 2019_06_09_110127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 2019_06_06_110221) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "url"
+    t.string "photo"
+    t.bigint "participation_id"
+    t.index ["participation_id"], name: "index_documents_on_participation_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -30,15 +33,19 @@ ActiveRecord::Schema.define(version: 2019_06_06_110221) do
     t.string "description"
     t.string "begin_date"
     t.string "end_date"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "participations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
-    t.string "event_id"
+    t.bigint "user_id"
+    t.bigint "event_id"
     t.string "wanted_status"
     t.boolean "status"
+    t.index ["event_id"], name: "index_participations_on_event_id"
+    t.index ["user_id"], name: "index_participations_on_user_id"
   end
 
   create_table "status_assignations", force: :cascade do |t|
@@ -82,8 +89,13 @@ ActiveRecord::Schema.define(version: 2019_06_06_110221) do
     t.string "date_of_birth"
     t.string "phone_number"
     t.string "photo"
+    t.string "job"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "documents", "participations"
+  add_foreign_key "events", "users"
+  add_foreign_key "participations", "events"
+  add_foreign_key "participations", "users"
 end

@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    if params[:query].present?
+      @events = Event.where(name: params[:query]).or(Event.where(localisation: params[:query]))
+    else
+      @events = Event.all
+    end
   end
 
   def index_manager
@@ -17,8 +21,9 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.user_id = current_user.id
     if @event.save
-      redirect_to event_path(@event)
+      redirect_to index_manager_events_path(current_user)
     else
       render :new
     end
@@ -42,6 +47,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :begin_date, :end_date, :description, :localisation)
+    params.require(:event).permit(:name, :begin_date, :end_date, :description, :localisation, :user_id)
   end
 end

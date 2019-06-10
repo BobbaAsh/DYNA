@@ -45,12 +45,28 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users
   resources :events do
-   resources :participations, only: [:index, :new, :show, :create]
- end
-  resources :status_assignations, only: [:create, :delete]
+    collection do
+        get :index_manager
+      end
 
-  resources :task_assignations, only: [:create, :delete]
-  resources :documents
-  resources :status, only: [:index, :create, :delete, :update]
-  resources :tasks
+    resources :participations, only: [:index, :new, :show, :create] do
+      member do
+        patch :accept
+        patch :decline
+      end
+
+
+      resources :documents, only: [:new, :create, :show]
+    end
+   end
+
+
+
+
+
+resources :status_assignations, only: [:create, :delete]
+resources :task_assignations, only: [:create, :delete]
+resources :status, only: [:index, :create, :delete, :update]
+resources :tasks
+
 end

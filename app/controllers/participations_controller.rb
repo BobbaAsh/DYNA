@@ -2,16 +2,35 @@ class ParticipationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @participations = Participation.all
+    @event = Event.find(params[:event_id])
+    @participations = Participation.where(event_id: @event.id)
+
   end
 
   def show
     @participation = Participation.find(params[:id])
+
   end
 
   def new
     @participation = Participation.new
     @event = Event.find(params[:event_id])
+  end
+
+  def accept
+    @event = Event.find(params[:event_id])
+    @participation = Participation.find(params[:id])
+    @participation.status = true
+    @participation.save
+    redirect_to event_participations_path
+  end
+
+  def decline
+    @event = Event.find(params[:event_id])
+    @participation = Participation.find(params[:id])
+    @participation.status = false
+    @participation.save
+    redirect_to event_participations_path
   end
 
   def create
@@ -20,7 +39,8 @@ class ParticipationsController < ApplicationController
     @event = Event.find(params[:event_id])
     @participation.event = @event
     if @participation.save
-      redirect_to event_participations_path
+
+      redirect_to event_participation_path(params[:event_id], @participation.id)
     else
       render :new
     end

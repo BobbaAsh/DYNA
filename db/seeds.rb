@@ -34,3 +34,14 @@ puts 'Creating 5 fake events...'
 end
 puts 'Finished!'
 
+puts 'Creating 2 fake documents...'
+2.times do
+ document = Document.create!(
+  name: Faker::Name.last_name,
+  url: "Marseille"
+
+
+  )
+end
+puts 'Finished!'
+

@@ -1,6 +1,7 @@
 <%= simple_form_for(@user) do |f| %>
  <%= f.input :first_name, label: "Prénom", placeholder: "Ton prénom" %>
  <%= f.input :last_name, label: "Nom de famille", placeholder: "Ton nom" %>
+ <%= f.input :job, label: "Métier", placeholder: "Métier" %>
  <%= f.input :date_of_birth, label: "Date de naissance", placeholder: "jj/mm/aaaa" %>
  <%= f.input :ss_number, label: "Sécurité Sociale", placeholder: "Ton numéro de sécurité sociale" %>
  <%= f.input :address, label: "Adresse postale", placeholder: "Ton adresse" %>
