@@ -1,2 +1,2 @@
-class StatusAssignationsController < ApplicationControllern
+class StatusAssignationsController < ApplicationController
 end
