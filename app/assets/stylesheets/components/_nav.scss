@@ -1,15 +1,22 @@
 .nav {
+  margin-top: 20px;
   height: 60px;
   justify-content: space-around;
-  text-decoration: none;
+}
+
+.nav a {
   color: black;
-
+  font-weight: bold;
 }
 
-#nav-home {
-  display: flex;
+.tab-content #nav-home {
   margin: 50px;
+  justify-content: center;
 }
+
+// .tab-content #nav-contact {
+//   margin-top: -550px;
+// }
 
 #nav-home h1 {
   font-size: 20px;
@@ -33,7 +40,13 @@ ul {
   margin: 30px;
 }
 
-// .tab-content {
-//   justify-content: center;
-//   display: flex;
-// }
+.nav :hover {
+  background-color: #c6ba95;
+}
+
+
+.tab-content > .active {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-around;
+}
