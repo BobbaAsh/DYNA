@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    if params[:query].present?
+      @events = Event.where(name: params[:query])
+    else
+      @events = Event.all
+    end
   end
 
   def index_manager
