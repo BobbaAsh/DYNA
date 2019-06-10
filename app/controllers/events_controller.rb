@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   def index
     if params[:query].present?
-      @events = Event.where(name: params[:query])
+      @events = Event.where(name: params[:query]).or(Event.where(localisation: params[:query]))
     else
       @events = Event.all
     end
