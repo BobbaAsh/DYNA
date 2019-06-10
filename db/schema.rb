@@ -41,10 +41,12 @@ ActiveRecord::Schema.define(version: 2019_06_10_095249) do
   create_table "participations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
-    t.string "event_id"
+    t.bigint "user_id"
+    t.bigint "event_id"
     t.string "wanted_status"
     t.boolean "status"
+    t.index ["event_id"], name: "index_participations_on_event_id"
+    t.index ["user_id"], name: "index_participations_on_user_id"
   end
 
   create_table "status_assignations", force: :cascade do |t|
@@ -95,4 +97,6 @@ ActiveRecord::Schema.define(version: 2019_06_10_095249) do
 
   add_foreign_key "documents", "participations"
   add_foreign_key "events", "users"
+  add_foreign_key "participations", "events"
+  add_foreign_key "participations", "users"
 end
