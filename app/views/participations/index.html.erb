@@ -7,7 +7,7 @@
         <div class="card-info">
           <div class="card-product-infos">
             <h3><%= @event.name %></h3>
-            <h4><%= participation.user.first_name %></h4>
+            <h4><%= link_to "#{participation.user.first_name}", user_path(participation.user) %></h4>
             <p><%= participation.wanted_status %></p>
           </div>
           <div class="row">
