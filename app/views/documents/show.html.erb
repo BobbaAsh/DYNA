@@ -1,4 +1,5 @@
 <h1>Documents#show</h1>
 <p>Find me in app/views/documents/show.html.erb
+  <%= @document.name %>
 <%= cl_image_tag @document.photo, height: 300, width: 400, crop: :fill %>
 </p>
