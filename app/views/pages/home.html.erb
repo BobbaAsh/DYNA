@@ -25,21 +25,20 @@
   <section class="listevent">
     <div class="container" >
 
-      <h1 >Mes participations</h1>
 
-
-        <% @participations.each  do |participation| %>
-        <div class = "row">
-        <div class= "">
-          <h2 class="card-text"> <%= participation.event.name %></h2>
-          <br/>
-           <p class="card-text"> Statut: <% if participation.status == true %>
-             <p class="card-text"> Acceptée </p>
-          <% else participation.status == false%>
-              <p class="card-text"> Refusée </p>
-          <% end %></p>
+      <h1 class="artist-text-center">Mes participations</h1>
+    <% @participations.each  do |participation| %>
+    <div class="row">
+        <div class="card-body">
+          <h2 class="card-text"> <%= link_to "#{participation.event.name}", event_path(participation.event) %></h2>
+           <p class="card-text"> Statut:<%= participation.status %></p>
+           <% participation.documents.each do |document| %>
+              <%= document.name %>
+              <%= cl_image_tag document.photo, height: 300, width: 400, crop: :fill %>
+            <% end %>
         </div>
-        <div class="row d-flex justify-content-between ">
+    <% end %>
+
 
            <% participation.documents.each do |document| %>
               <div class ="card ">
