@@ -3,7 +3,7 @@
   <div class="container1">
     <% @participations.sort_by{|participation| participation.id}.each do |participation| %>
       <div class="card-product">
-        <img src="https://static.mmzstatic.com/wp-content/uploads/2015/01/benevole-festival-musique-temoignage.jpg">
+        <%= cl_image_tag @event.photo, height: 300, width: 400, crop: :fill %>
         <div class="card-info">
           <div class="card-product-infos">
             <h3><%= @event.name %></h3>
