@@ -1,0 +1,60 @@
+.nav {
+  margin-top: 20px;
+  height: 60px;
+  justify-content: space-around;
+}
+
+.nav a {
+  color: black;
+  font-weight: bold;
+}
+
+.tab-content #nav-home {
+  margin: 50px;
+  justify-content: center;
+}
+
+// .tab-content #nav-contact {
+//   margin-top: -550px;
+// }
+
+#nav-home h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#nav-home h4 {
+  font-size: 16px;
+  color: #4c4c4c;
+}
+
+#nav-home p {
+  font-size: 16px;
+  color: #4c4c4c;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding-right: 50px;
+  margin: 30px;
+}
+
+.nav :hover {
+  background-color: #c6ba95;
+}
+
+
+.tab-content > .active {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#nav-contact {
+  height: 500px;
+}
+
+#nav-profile {
+  height: 500px;
+}
