@@ -17,12 +17,12 @@
 
   <section class="listevent">
     <div class="container" >
-     <div class="row">
+
       <h1 class="artist-text-center">Mes participations</h1>
-    <div class="col-lg-12 cards">
     <% @participations.each  do |participation| %>
+    <div class="row">
         <div class="card-body">
-          <h2 class="card-text"> <%= participation.id %></h2>
+          <h2 class="card-text"> <%= link_to "#{participation.event.name}", event_path(participation.event) %></h2>
            <p class="card-text"> Statut:<%= participation.status %></p>
            <% participation.documents.each do |document| %>
               <%= document.name %>
@@ -30,7 +30,6 @@
             <% end %>
         </div>
     <% end %>
-    </div>
 
     </div>
   </section>
