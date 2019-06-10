@@ -6,6 +6,8 @@
     <%= f.input :end_date, label: "Date de fin", placeholder: "jj/mm/aaaa" %>
     <%= f.input :localisation, label: "Localisation", placeholder: "Adresse" %>
     <%= f.input :description, label: "Description", placeholder: "En quoi consiste ton évènement" %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
     <%= f.button :submit, class: "btn btn-info" %>
     <% end %>
   </div>

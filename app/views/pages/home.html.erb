@@ -21,6 +21,38 @@
       <a href="#" class="btn">Accéder à l'évènement  <i class="fa fa-angle-right"></i></a>
     </div>
   </section>
+
+  <section class="listevent">
+    <div class="container" >
+
+      <h1 >Mes participations</h1>
+
+
+        <% @participations.each  do |participation| %>
+        <div class = "row">
+        <div class= "">
+          <h2 class="card-text"> <%= participation.event.name %></h2>
+          <br/>
+           <p class="card-text"> Statut: <% if participation.status == true %>
+             <p class="card-text"> Acceptée </p>
+          <% else participation.status == false%>
+              <p class="card-text"> Refusée </p>
+          <% end %></p>
+        </div>
+        <div class="row d-flex justify-content-between ">
+
+           <% participation.documents.each do |document| %>
+              <div class ="card ">
+              <%= document.name %>
+              <%= cl_image_tag document.photo, height: 250, width: 250, crop: :fill %>
+              </div>
+             <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section class="contact">
     <h1>Contactez-nous</h1>
     <h2>Si vous avez des questions intelligentes</h2>

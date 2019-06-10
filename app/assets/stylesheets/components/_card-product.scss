@@ -21,14 +21,14 @@
 }
 
 .card-product p {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   font-weight: bold;
 }
 
 .card-product .card-product-infos {
-  padding: 15px;
+  padding: 20px;
 }
 
 .card-info {
@@ -36,3 +36,17 @@
   justify-content: space-between;
   flex-grow: 1;
 }
+
+.card-product-infos h3 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.card-product-infos h4 {
+  color: black;
+  font-size: 20px;
+  line-height: 1.4;
+  text-decoration: black;
+}
+
