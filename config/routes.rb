@@ -65,10 +65,10 @@ Rails.application.routes.draw do
     resources :documents, only: [:new, :create, :show ]
   end
 
-
   resources :status_assignations, only: [:create, :delete]
   resources :task_assignations, only: [:create, :delete]
   resources :status, only: [:index, :create, :delete, :update]
   resources :tasks
+
 
 end
