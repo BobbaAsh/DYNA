@@ -4,7 +4,11 @@
   def index
     @event = Event.find(params[:event_id])
     @participations = Participation.where(event_id: @event.id)
+  end
 
+  def index_my_participation
+    @events = current_user.events
+    @participations = Participation.where(user_id: current_user)
   end
 
   def show
