@@ -57,11 +57,15 @@ Rails.application.routes.draw do
         patch :decline
       end
 
+
     end
 
   end
 
   resources :participations, only: [] do
+    collection do
+        get :index_my_participation
+      end
     resources :documents, only: [:new, :create, :show ]
   end
 
@@ -69,6 +73,5 @@ Rails.application.routes.draw do
   resources :task_assignations, only: [:create, :delete]
   resources :status, only: [:index, :create, :delete, :update]
   resources :tasks
-
 
 end
