@@ -1,3 +1,8 @@
+<head>
+  <link href="../assets/stylesheets/pages/lightbox.css" rel="stylesheet">
+</head>
+
+<body>
 <% if user_signed_in? && current_user.job == "Bénévole" %>
 <div>
   <section class="benevole">
@@ -20,7 +25,6 @@
 
       <h1 >Mes participations</h1>
 
-
         <% @participations.each  do |participation| %>
         <div class = "row">
         <div class= "">
@@ -37,7 +41,7 @@
            <% participation.documents.each do |document| %>
               <div class ="card ">
               <%= document.name %>
-              <%= cl_image_tag document.photo, height: 250, width: 250, crop: :fill %>
+              <%= cl_image_tag document.photo,  height: 250, width: 250, crop: :fill %>
               </div>
              <% end %>
         <% end %>
@@ -230,4 +234,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+<script src="../assets/javascripts/lightbox.js"></script>
+
 <% end %>
+</body>
