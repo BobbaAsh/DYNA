@@ -1,40 +1,25 @@
-
-<div class="container pad20" style="width:60%; margin-top: 30px; margin-bottom: 30px;" >
-  <div class="row">
-    <div class="col-lg-12 ">
-      <h1 class="artist-text-center">Participation <%= @participation.event.name %></h1>
-      <p class="text-center"> <%= "Du: #{@participation.event.begin_date}" %> </p>
-      <p class="text-center"> <%= "Au: #{@participation.event.end_date}" %> </p>
-      <p class="text-center"> <%= "Post demander: #{@participation.wanted_status}" %> </p>
-      <p class="text-center"> <%= "Status : #{@participation.status}" %> </p>
-      <% if @participation.status == true %>
-     <p> "Accepter" </p>
-      <%else%> <p> "En Attente" </p>
-
-    <% end %>
-    </div>
-
 <div class="container-fullscreen">
     <section class="home">
     <div class="container1">
-      <h1>Merci pour votre candidature</h1>
-      <h2>au <%= @participation.event.name %> </h2>
+      <% if @participation.status == true %>
+        <h1>Félicitations <%= @participation.user.first_name %>,</h1>
+        <h2>vous participez au <strong><%= @participation.event.name %></strong> </h2>
+        <h2>au poste de <%= @participation.wanted_status %> </h2>
+        <h2>Candidature acceptée</h2>
+        <%= link_to "Documents à télécharger", status_index_path, class: "btn1 btn-info" %>
+      <%elsif @participation.status == false %>
+        <h1>Désolé, <%= @participation.user.first_name %></h1>
+        <h2>au <%= @participation.event.name %> </h2>
+        <h2>au poste de <%= @participation.wanted_status %> </h2>
+        <h2>Candidature refusée</h2>
+      <% else %>
+        <h1>Merci pour votre candidature</h1>
+        <h2>au <%= @participation.event.name %> </h2>
+        <h2>au poste de <%= @participation.wanted_status %> </h2>
+        <h2>Candidature en attente</h2>
+      <% end %>
     </div>
   </section>
-  <div class="container pad20" style="width:60%; margin-top: 30px; margin-bottom: 30px;" >
-      <div class="row">
-        <div class="col-lg-12 ">
-          <p class="text-center"> <%= "Du #{@participation.event.begin_date} au #{@participation.event.end_date}" %> </p>
-          <p>Vous recevrez une notification lorsque votre candidature aura été validée.</p>
-        </div>
-      </div>
-
-  <%= link_to "Document", status_index_path %>
-
-
-
-  </div>
-
   <div class="text-center">
     <%= link_to "Back", events_path, class: "btn btn-info" %>
   </div>
