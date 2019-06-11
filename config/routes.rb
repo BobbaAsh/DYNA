@@ -66,7 +66,7 @@ Rails.application.routes.draw do
     collection do
         get :index_my_participation
       end
-    resources :documents, only: [:new, :create, :show ]
+    resources :documents, only: [:new, :create, :show, :index ]
   end
 
   resources :status_assignations, only: [:create, :delete]

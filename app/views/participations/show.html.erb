@@ -6,7 +6,7 @@
         <h2>vous participez au <strong><%= @participation.event.name %></strong> </h2>
         <h2>au poste de <%= @participation.wanted_status %> </h2>
         <h2>Candidature acceptée</h2>
-        <%= link_to "Documents à télécharger", status_index_path, class: "btn1 btn-info" %>
+        <%= link_to "Documents à télécharger", participation_documents_path(@participation.event), class: "btn1 btn-info" %>
       <%elsif @participation.status == false %>
         <h1>Désolé, <%= @participation.user.first_name %></h1>
         <h2>au <%= @participation.event.name %> </h2>
