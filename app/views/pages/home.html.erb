@@ -9,13 +9,7 @@
   </section>
   <section class="infoevent">
     <div class="container">
-<div
-  id="map"
-  style="width: 1000px;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+
       <h2>Évènement en cours</h2>
       <h1>Faker Fest</h1>
       <a href="#" class="btn">Accéder à l'évènement  <i class="fa fa-angle-right"></i></a>
@@ -235,4 +229,5 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+<% end %>
 <% end %>
