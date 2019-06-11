@@ -5,7 +5,11 @@
     "@rails/webpacker": "^4.0.6",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
+<<<<<<< HEAD
     "lightbox2": "^2.11.0",
+=======
+    "mapbox-gl": "^1.0.0",
+>>>>>>> 36f88bbd4550d59e7796557365891ddb9b0530d9
     "popper.js": "^1.15.0"
   },
   "devDependencies": {

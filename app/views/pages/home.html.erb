@@ -14,6 +14,7 @@
   </section>
   <section class="infoevent">
     <div class="container">
+
       <h2>Évènement en cours</h2>
       <h1>Faker Fest</h1>
       <a href="#" class="btn">Accéder à l'évènement  <i class="fa fa-angle-right"></i></a>
@@ -22,8 +23,7 @@
 
   <section class="listevent">
     <div class="container" >
-
-      <h1 >Mes participations</h1>
+     <h1 >Mes participations</h1>
 
         <% @participations.each  do |participation| %>
         <div class = "row">
@@ -50,6 +50,8 @@
   </div>
 </section>
 
+
+
   <section class="contact">
     <h1>Contactez-nous</h1>
     <h2>Si vous avez des questions intelligentes</h2>
@@ -63,8 +65,8 @@
     </div>
   </section>
 </div>
-
 <% elsif user_signed_in? && current_user.job == "Manager" %>
+
 
 <div>
   <section class="home">
@@ -94,7 +96,6 @@
     </div>
   </section>
 </div>
-
 <% else %>
 
 <div>
@@ -237,4 +238,11 @@ function showSlides(n) {
 <script src="../assets/javascripts/lightbox.js"></script>
 
 <% end %>
+<<<<<<< HEAD
 </body>
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42a177e5bdcbb19cee2ddfb60f761116484f9167
+>>>>>>> 36f88bbd4550d59e7796557365891ddb9b0530d9
