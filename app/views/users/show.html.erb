@@ -7,14 +7,18 @@
       <p class="information-title">Adresse: <%= @user.address %></p>
       <p class="information-title">Numéro de téléphone: <%= @user.phone_number %></p>
       <p class="information-title">Numéro de Sécurité Sociale: <%= @user.ss_number %></p>
+
     </div>
     <div class="container8">
       <%= cl_image_tag @user.photo, :width => 300, :height => 400, :crop => :fill %>
     </div>
+
   </section>
   <div class="row">
       <%= link_to 'retour', root_path, class: "btn btn-info" %>
+      <% if @user = @current_user %>
       <%= link_to 'Modifier', edit_user_path, method: :get, class: "btn btn-info" %>
+      <% end %>
     </div>
 </div>
 
