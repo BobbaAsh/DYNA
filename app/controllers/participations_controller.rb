@@ -4,6 +4,7 @@
   def index
     @event = Event.find(params[:event_id])
     @participations = Participation.where(event_id: @event.id)
+    @document = Document.new
 
   end
 

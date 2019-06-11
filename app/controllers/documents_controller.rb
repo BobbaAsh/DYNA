@@ -17,9 +17,10 @@ class DocumentsController < ApplicationController
     @participation = Participation.find(params[:participation_id])
     @document = Document.new(documents_params)
     @document.participation_id = @participation.id
+    @event = @participation.event
 
     if @document.save
-      redirect_to event_participations_path(@document)
+      redirect_to event_participations_path(@event)
     else
     render :new
     end

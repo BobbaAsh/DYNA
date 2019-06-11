@@ -5,17 +5,6 @@ class EventsController < ApplicationController
     else
       @events = Event.all
     end
-<<<<<<< HEAD
-=======
-    #@events = Event.where.not(latitude: nil, longitude: nil)
-
-    # @markers = @event.map do |event|
-    #   {
-    #     lat: flat.latitude,
-    #     lng: flat.longitude
-    #     }
-    # end
->>>>>>> 466466bf0cad9b74bcff2ee04e39498d3bff980d
   end
 
   def index_manager
