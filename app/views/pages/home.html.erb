@@ -40,7 +40,7 @@
               <%= cl_image_tag document.photo, height: 250, width: 250, crop: :fill %>
               </div>
              <% end %>
-        <% end %>
+
       </div>
     </div>
   </div>
@@ -60,6 +60,7 @@
   </section>
 </div>
 <% elsif user_signed_in? && current_user.job == "Manager" %>
+
 
 <div>
   <section class="home">
@@ -89,7 +90,6 @@
     </div>
   </section>
 </div>
-<% end %>
 <% else %>
 
 <div>
@@ -230,4 +230,3 @@ function showSlides(n) {
 }
 </script>
 <% end %>
-
