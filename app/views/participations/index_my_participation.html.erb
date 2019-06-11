@@ -1,0 +1,19 @@
+<div class="container-fullscreen">
+  <div class="container1">
+    <% @participations.sort_by{|participation| participation.id}.each do |participation| %>
+      <div class="card-product">
+        <%= cl_image_tag participation.event.photo, height: 300, width: 400, crop: :fill %>
+        <div class="card-info">
+          <div class="card-product-infos">
+            <h3><%= participation.event.name %></h3>
+            <h4><%= link_to "#{participation.user.first_name}", user_path(participation.user) %></h4>
+            <p><%= participation.wanted_status %></p>
+          </div>
+          <div class="card-product-infos">
+            <%= link_to "Voir", event_participation_path(participation.event, participation.id), class: "btn btn-info" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
