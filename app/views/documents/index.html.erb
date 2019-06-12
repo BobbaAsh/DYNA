@@ -6,12 +6,12 @@
           <div class="card-body">
             <h2 class="card-text"> <%= document.name %></h2>
             <p class="card-text"> <%= cl_image_tag document.photo, height: 600, width: 400, crop: :fill, class: "img-fluid" %></p>
-            <button type="button" class="btn2 btn-info" data-toggle="modal" data-target="#exampleModal">Voir document</button>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <button type="button" class="btn2 btn-info" data-toggle="modal" data-target="#exampleModal-<%=document.id%>">Voir document</button>
+            <div class="modal fade" id="exampleModal-<%=document.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><%= document.name %></h5>
+                    <h5 class="modal-title" id="exampleModal-<%=document.id%>"><%= document.name %></h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
