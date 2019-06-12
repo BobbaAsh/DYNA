@@ -28,6 +28,20 @@
     width: 60%;
 }
 
+.btn2 {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #c6ba95;
+    border: 2px solid #c6ba95;
+    transition: 200ms;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
 .btn3 {
   background-color: green;
   display: inline-block;
