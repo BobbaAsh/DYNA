@@ -1,5 +1,14 @@
 <div class="container-fullscreen">
   <div class="container1">
+     <form class="form-inline">
+      <%= form_tag event_participations_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Rechercher une participation"
+        %>
+      <% end %>
+    </form>
     <% @participations.sort_by{|participation| participation.id}.each do |participation| %>
       <div class="card-product">
         <%= cl_image_tag @event.photo, height: 300, width: 400, crop: :fill %>
