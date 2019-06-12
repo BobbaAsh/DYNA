@@ -1,5 +1,5 @@
 meta_product_name: "Dyna"
 meta_title: "Dyna - Dynamize your event"
 meta_description: "Créer ton event ou postule pour être bénévoles sur des events "
-meta_image: "DYNAlogo.png" # should exist in `app/assets/images/`
+meta_image: "imagefb.jpg" # should exist in `app/assets/images/`
 twitter_account: "@dyna_app"   # required for Twitter Cards
