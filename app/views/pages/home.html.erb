@@ -9,7 +9,9 @@
     <div class="container1">
     <h1>Bonjour <%= current_user.first_name %>,</h1>
     <h2>Deviens bénévole et participe au festival</h2>
-    <%= link_to "Postule", events_path, class: "btn btn-info" %>
+      <div class="container6">
+        <%= link_to "Postule", events_path, class: "btn5 btn-info" %>
+      </div>
     </div>
   </section>
 
@@ -32,7 +34,9 @@
     <div class="container1">
     <h1>Bonjour <%= current_user.first_name %>,</h1>
     <h2>Gère les updates depuis ta dernière connexion</h2>
-    <%= link_to "Voir les changements", "#", class: "btn btn-info" %>
+      <div class="container6">
+      <%= link_to "Voir les changements", "#", class: "btn5 btn-info" %>
+      </div>
     </div>
   </section>
   <section class="infoevent">
@@ -50,7 +54,7 @@
             <label class="input"><span>Nom complet</span><input type="text" name="name" required></label>
             <label class="input"><span>Email</span><input type="email" name="email" required></label>
             <label class="message"><span>Message</span><textarea name="message" required></textarea></label>
-            <label class="submit"><a href="#" class="btn1">Envoie ton message  <i class="fa fa-angle-right"></i></a></label>
+            <label class="submit"><a href="#" class="btn2">Envoie ton message  <i class="fa fa-angle-right"></i></a></label>
         </form>
     </div>
   </section>
@@ -62,7 +66,9 @@
     <div class="container1">
     <h1>Dyna, organise ton event sans la partie relou</h1>
     <h2>Dynamise la manière d'organiser un évènement</h2>
-    <%= link_to "Rejoins-nous", "#", class: "btn btn-info" %>
+      <div class="container6">
+        <%= link_to "Rejoins-nous", "#", class: "btn5 btn-info" %>
+      </div>
     </div>
   </section>
   <div class="slideshow-container">
@@ -104,13 +110,6 @@
       </div>
     </div>
   </section>
-    <section class="home">
-    <div class="container1">
-    <h1>Deviens bénévole</h1>
-    <h2>Participe au festival de ton choix</h2>
-    <%= link_to "Postule", "#", class: "btn btn-info" %>
-    </div>
-  </section>
   <div>
     <section class="contact">
       <h1>Contactez-nous</h1>
@@ -120,7 +119,7 @@
               <label class="input"><span>Name</span><input type="text" name="name" required></label>
               <label class="input"><span>Email Address</span><input type="email" name="email" required></label>
               <label class="message"><span>Message</span><textarea name="message" required></textarea></label>
-              <label class="submit"><a href="#" class="btn1">Send Message. <i class="fa fa-angle-right"></i></a></label>
+              <label class="submit"><a href="#" class="btn2">Send Message. <i class="fa fa-angle-right"></i></a></label>
           </form>
       </div>
     </section>
