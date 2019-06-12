@@ -15,9 +15,15 @@
 
   </section>
   <div class="row">
+<<<<<<< HEAD
       <%= link_to 'retour', root_path, class: "btn btn-info" %>
       <% if @user == current_user %>
       <%= link_to 'Modifier', edit_user_path, method: :get, class: "btn btn-info" %>
+=======
+      <%= link_to 'Retour', root_path, class: "btn2 btn-info" %>
+      <% if @user = @current_user %>
+      <%= link_to 'Modifier', edit_user_path, method: :get, class: "btn2 btn-info" %>
+>>>>>>> d9aeaf1717f844d47cbf586781a98a39a217ef92
       <% end %>
     </div>
 </div>
