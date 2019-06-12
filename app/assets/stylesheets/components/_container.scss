@@ -50,9 +50,23 @@
   display: flex;
 }
 
+.container6 {
+  width: 100%;
+  height: 10vh;
+  text-align: center;
+  margin-top: 10%;
+}
+
 .container8 {
   width: 80%;
   text-align: left;
+}
+
+.container7 {
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+  margin-top: 5%;
 }
 
 .image {
@@ -68,7 +82,6 @@ section {
 .container-fullscreen {
   min-height: calc(100vh - 210px);
   text-align: center;
-  padding-top: 20px;
 }
 
 .container-fullscreen h1 {
