@@ -13,6 +13,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @participation = Participation.new
   end
 
   def new
