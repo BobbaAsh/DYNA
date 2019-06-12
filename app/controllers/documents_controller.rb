@@ -1,6 +1,7 @@
 class DocumentsController < ApplicationController
   def index
-    @documents = Document.all
+    @participation = Participation.find(params[:participation_id])
+    @documents = Document.where(participation_id: @participation)
   end
 
   def show
