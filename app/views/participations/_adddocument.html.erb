@@ -9,7 +9,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <%= simple_form_for([locals[:participation], locals[:model]]) do |f| %>
+                    <%= simple_form_for([locals[:event], locals[:participation], locals[:model]]) do |f| %>
                     <%= f.input :name, placeholder: "name"  %>
                     <%= f.input :photo %>
                     <%= f.input :photo_cache, as: :hidden %>
