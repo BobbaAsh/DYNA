@@ -7,7 +7,7 @@
       <h2> <%= "Du #{@event.begin_date} au #{@event.end_date} @ #{@event.localisation}" %> </h2>
       <p> <%= @event.description %> </p>
     </div>
-    <div class="container7">
+    <div class="container10">
       <% if current_user.job == "Bénévole" %>
         <p><%= render 'selectjob', locals:{ event: @event, model: @participation} %></p>
       <% end %>

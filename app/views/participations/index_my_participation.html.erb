@@ -1,14 +1,21 @@
 <div class="container-fullscreen">
   <div class="container3">
     <% @participations.sort_by{|participation| participation.id}.each do |participation| %>
-      <div class="card-product">
+      <div class="card-product1">
         <%= cl_image_tag participation.event.photo, height: 300, width: 400, crop: :fill %>
-        <div class="card-info">
-          <div class="card-product-infos">
+        <div class="card-info1">
+          <div class="card-product-infos1">
             <h2><%= participation.event.name %></h2>
             <h3><%= participation.wanted_status %></h3>
+            <% if participation.status == true %>
+            <h3>Candidature acceptée</h3>
+            <% elsif participation.status == false %>
+            <h3>Candidature refusée</h3>
+            <% else %>
+            <h3>En attente</h3>
+            <% end %>
           </div>
-          <div class="card-product-infos">
+          <div class="card-product-infos1">
             <%= link_to "Voir", event_participation_path(participation.event, participation.id), class: "btn2 btn-info" %>
           </div>
         </div>
