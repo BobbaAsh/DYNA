@@ -42,7 +42,6 @@
   flex-grow: 1;
 }
 
-
 .card-product-infos h3 {
   color: #3f3f3f;
   font-size: 20px;
@@ -50,5 +49,14 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-style: italic;
+
+.card-product-infos h4 a {
+  color: black;
+  font-size: 20px;
+  line-height: 1.4;
+  text-decoration: underline;
+  margin-bottom: 2px;
 }
+
+
 

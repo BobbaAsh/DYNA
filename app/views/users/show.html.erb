@@ -14,9 +14,9 @@
     </div>
   </section>
   <div class="row">
-      <%= link_to 'Retour', root_path, class: "btn2 btn-info" %>
-      <% if @user = @current_user %>
-      <%= link_to 'Modifier', edit_user_path, method: :get, class: "btn2 btn-info" %>
+      <%= link_to 'retour', root_path, class: "btn btn-info" %>
+      <% if @user == current_user %>
+      <%= link_to 'Modifier', edit_user_path, method: :get, class: "btn btn-info" %>
       <% end %>
     </div>
 </div>
