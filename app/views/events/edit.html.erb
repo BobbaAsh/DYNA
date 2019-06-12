@@ -1,2 +1,21 @@
 <h1>Event#edit</h1>
-<p>Find me in app/views/event/edit.html.erb</p>
+
+ <div class="container">
+    <%= simple_form_for(@event) do |f| %>
+    <%= f.input :name, label: "Nom de l'évènement", placeholder: "Nom" %>
+    <%= f.input :begin_date, label: "Date de début", placeholder: "jj/mm/aaaa" %>
+    <%= f.input :end_date, label: "Date de fin", placeholder: "jj/mm/aaaa" %>
+    <%= f.input :localisation, label: "Localisation", placeholder: "Adresse" %>
+    <%= f.input :description, label: "Description", placeholder: "En quoi consiste ton évènement" %>
+
+    <div class="custom-control custom-switch">
+      <%= f.check_box :visibility, id: "customSwitch1", class: "custom-control-input" %>
+      <label class="custom-control-label" for="customSwitch1">Rendre mon evenement visible</label>
+    </div>
+
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.button :submit, class: "btn btn-info" %>
+    <% end %>
+  </div>
+
