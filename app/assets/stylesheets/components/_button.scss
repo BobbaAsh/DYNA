@@ -8,7 +8,7 @@
     transition: 200ms;
     background-color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-right: 10px;
     width: 40%;
 }
@@ -23,7 +23,7 @@
     transition: 200ms;
     background: transparent;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-right: 10px;
     width: 60%;
 }
@@ -31,10 +31,10 @@
 .btn2 {
     display: inline-block;
     padding: 15px 30px;
-    border-radius: 3px;
-    font-size: 20px;
+    border-radius: 50px;
+    font-size: 15px;
     color: #c6ba95;
-    border: 2px solid #c6ba95;
+    border: 1px solid #c6ba95;
     transition: 200ms;
     background: transparent;
     cursor: pointer;
@@ -47,6 +47,7 @@
   display: inline-block;
   padding: 15px 30px;
   border-radius: 50px;
+  font-size: 15px;
   color: white;
   border: 1px solid #c6ba95;
   transition: 200ms;
@@ -60,6 +61,7 @@
   display: inline-block;
   padding: 15px 30px;
   border-radius: 50px;
+  font-size: 15px;
   color: white;
   border: 1px solid #c6ba95;
   transition: 200ms;

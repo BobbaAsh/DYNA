@@ -8,6 +8,18 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: left;
+}
+
+.container1 h2 {
+  line-height: 6px;
+  font-size: 20px;
+}
+
+.container3 {
+    width: 70%;
+    max-width: 800px;
+    margin: 30px 30px 200px 300px;
 }
 
 .container2 {
@@ -36,16 +48,11 @@
   margin-right: 30%;
   margin-left: 30%;
   display: flex;
-
 }
 
-.container4 .information {
-  font-weight: bold;
-}
-
-.container4 .information-title {
-  font-size: 12px;
-  margin-bottom: 1px;
+.container8 {
+  width: 80%;
+  text-align: left;
 }
 
 .image {
@@ -57,3 +64,16 @@ section {
   display: block;
   padding: 100px 20px;
 }
+
+.container-fullscreen {
+  min-height: calc(100vh - 210px);
+  text-align: center;
+  padding-top: 20px;
+}
+
+.container-fullscreen h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
