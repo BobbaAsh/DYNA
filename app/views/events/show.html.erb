@@ -3,12 +3,15 @@
     <div class="container1">
       <h1><%= @event.name %> </h1>
       <h2> <%= "Du #{@event.begin_date} au #{@event.end_date} @ #{@event.localisation}" %> </h2>
-      <h2> <%= @event.description %> </h2>
-  <% if current_user.job == "Bénévole" %>
-    <p class="text-center"> <%= link_to "Candidater", new_event_participation_path(@event), class: "btn2 btn-info" %></p>
+      <p> <%= @event.description %> </p>
+    </div>
+    <div class="container7">
+      <% if current_user.job == "Bénévole" %>
+        <p class="text-center"> <%= link_to "Candidater", new_event_participation_path(@event), class: "btn5 btn-info" %></p>
+      <% end %>
     </div>
   </section>
-  <% else %>
+  <% if current_user.job == "Manager" %>
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Artistes</a>

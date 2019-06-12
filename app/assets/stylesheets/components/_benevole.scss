@@ -1,13 +1,3 @@
-.benevole {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("https://pbs.twimg.com/media/DlOvWjRUwAA3LoG.jpg");
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-}
-
 .benevole h2 {
     margin-bottom: 15px;
     font-size: 28px;
@@ -29,4 +19,12 @@
     position: relative;
     z-index: 6;
     color: white;
+}
+
+.benevole {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("https://www.vrtxmag.com/site/assets/files/48948/01_travisscott_01.jpg");
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
 }
