@@ -1,13 +1,14 @@
 <div class="container-fullscreen">
-  <section class="home3" style="background-color: white;">
-    <div class="container1">
+  <section class="home3">
+    <div class="container5">
       <h1><%= @user.first_name %> <%=  @user.last_name %></h1>
       <h2> <%= @user.job %></h2>
       <p class="information"> <%= @user.date_of_birth %> </p>
       <p class="information-title">Adresse: <%= @user.address %></p>
       <p class="information-title">Numéro de téléphone: <%= @user.phone_number %></p>
-      <p class="information-title">Numéro de Sécurité Sociale: <%= @user.ss_number %></p>
-
+      <h2>Documents</h2>
+      <p class="information-title"><u>cartevitaleCamilleDupont.jpg</u></p>
+      <p class="information-title"><u>carteidentitéCamilleDupont.jpg</u></p>
     </div>
     <div class="container8">
       <%= cl_image_tag @user.photo, :width => 300, :height => 400, :crop => :fill %>

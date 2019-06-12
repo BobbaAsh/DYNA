@@ -1,5 +1,5 @@
 <div class="container-fullscreen">
-  <div class="container1">
+  <div class="container5">
      <form class="form-inline">
       <%= form_tag event_participations_path, method: :get do %>
         <%= text_field_tag :query,
@@ -10,16 +10,16 @@
       <% end %>
     </form>
     <% @participations.sort_by{|participation| participation.id}.each do |participation| %>
-      <div class="card-product">
+      <div class="card-product4">
         <%= cl_image_tag @event.photo, height: 300, width: 400, crop: :fill %>
-        <div class="card-info">
-          <div class="card-product-infos">
-            <h3><%= @event.name %></h3>
+        <div class="card-info4">
+          <div class="card-product-infos4">
+            <h2><%= @event.name %></h2>
             <h4><%= link_to "#{participation.user.first_name}", user_path(participation.user) %></h4>
             <p><%= participation.wanted_status %></p>
             <p><%= render partial: 'adddocument', locals:{ event: @event, participation: participation, document: @document }  if participation.status == true   %></p>
           </div>
-          <div class="row">
+          <div class="card-product-infos5">
             <% if participation.status == true %>
               <%= link_to "Acceptée", accept_event_participation_path(@event, participation), method: :patch,  class: "btn3" %>
             <% else %>
