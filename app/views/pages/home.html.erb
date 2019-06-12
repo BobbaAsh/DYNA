@@ -5,11 +5,11 @@
 <body>
 <% if user_signed_in? && current_user.job == "Bénévole" %>
 <div>
-  <section class="benevole">
+  <section class="home">
     <div class="container1">
     <h1>Bonjour <%= current_user.first_name %>,</h1>
-    <h2>Obtiens ton billet gratuit en échange de travail sur le lieu du festival</h2>
-    <%= link_to "Postule", events_path, class: "btn1 btn-info" %>
+    <h2>Deviens bénévole et participe au festival</h2>
+    <%= link_to "Postule", events_path, class: "btn btn-info" %>
     </div>
   </section>
   <section class="contact">
@@ -20,20 +20,18 @@
             <label class="input"><span>Nom complet</span><input type="text" name="name" required></label>
             <label class="input"><span>Email</span><input type="email" name="email" required></label>
             <label class="message"><span>Message</span><textarea name="message" required></textarea></label>
-            <label class="submit"><a href="#" class="btn">Envoie ton message  <i class="fa fa-angle-right"></i></a></label>
+            <label class="submit"><a href="#" class="btn1">Envoie ton message  <i class="fa fa-angle-right"></i></a></label>
         </form>
     </div>
   </section>
 </div>
 <% elsif user_signed_in? && current_user.job == "Manager" %>
-
-
 <div>
   <section class="home">
     <div class="container1">
     <h1>Bonjour <%= current_user.first_name %>,</h1>
     <h2>Gère les updates depuis ta dernière connexion</h2>
-    <%= link_to "Voir les changements", "#", class: "btn1 btn-info" %>
+    <%= link_to "Voir les changements", "#", class: "btn btn-info" %>
     </div>
   </section>
   <section class="infoevent">
@@ -51,7 +49,7 @@
             <label class="input"><span>Nom complet</span><input type="text" name="name" required></label>
             <label class="input"><span>Email</span><input type="email" name="email" required></label>
             <label class="message"><span>Message</span><textarea name="message" required></textarea></label>
-            <label class="submit"><a href="#" class="btn">Envoie ton message  <i class="fa fa-angle-right"></i></a></label>
+            <label class="submit"><a href="#" class="btn1">Envoie ton message  <i class="fa fa-angle-right"></i></a></label>
         </form>
     </div>
   </section>
@@ -63,7 +61,7 @@
     <div class="container1">
     <h1>Dyna, organise ton event sans la partie relou</h1>
     <h2>Dynamise la manière d'organiser un évènement</h2>
-    <%= link_to "Rejoins-nous", "#", class: "btn1 btn-info" %>
+    <%= link_to "Rejoins-nous", "#", class: "btn btn-info" %>
     </div>
   </section>
   <div class="slideshow-container">
@@ -105,53 +103,13 @@
       </div>
     </div>
   </section>
-    <section class="benevole">
+    <section class="home">
     <div class="container1">
-    <h1>Deviens bénévole et participe au festival</h1>
-    <h2>Obtiens ton billet gratuit en échange de travail sur le lieu du festival</h2>
-    <%= link_to "Postule", "#", class: "btn1 btn-info" %>
+    <h1>Deviens bénévole</h1>
+    <h2>Participe au festival de ton choix</h2>
+    <%= link_to "Postule", "#", class: "btn btn-info" %>
     </div>
   </section>
-  <div>
-    <section class="pricing">
-        <h1>Nos prix</h1>
-        <h2>Parce que la vie c'est pas gratuit</h2>
-        <div class="container2">
-        <div>
-          <h3>Free</h3>
-          <div class="price">0€</div>
-          <ul>
-            <li>Évènement privé</li>
-            <li>Gère les tâches de chacun</li>
-            <li>Droit d'accès pour tous</li>
-          </ul>
-          <a class="btn btn-info" href="#">Commencez</a>
-        </div>
-        <div>
-          <h3>Standard</h3>
-          <div class="price">sur devis</div>
-          <ul>
-            <li>Évènement public</li>
-            <li>Gérèz vos prestataires via Dyna</li>
-            <li>Centralisation des contacts</li>
-            <li>Centralisation des contrats et devis</li>
-          </ul>
-          <a class="btn btn-info" href="#">Commencez</a>
-        </div>
-        <div>
-          <h3>Premium</h3>
-          <div class="price">sur devis</div>
-          <ul>
-            <li>évènement public</li>
-            <li>Dyna gère l'app pour vous</li>
-            <li>App mobile pour l'event</li>
-            <li>Beaucoup de choses en plus</li>
-          </ul>
-          <a class="btn btn-info" href="#">Commencez</a>
-        </div>
-      </div>
-    </section>
-  </div>
   <div>
     <section class="contact">
       <h1>Contactez-nous</h1>
@@ -161,7 +119,7 @@
               <label class="input"><span>Name</span><input type="text" name="name" required></label>
               <label class="input"><span>Email Address</span><input type="email" name="email" required></label>
               <label class="message"><span>Message</span><textarea name="message" required></textarea></label>
-              <label class="submit"><a href="#" class="btn">Send Message<i class="fa fa-angle-right"></i></a></label>
+              <label class="submit"><a href="#" class="btn1">Send Message. <i class="fa fa-angle-right"></i></a></label>
           </form>
       </div>
     </section>

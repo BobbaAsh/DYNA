@@ -3,7 +3,7 @@
 @import "avatar";
 @import "navbar";
 @import "footer";
-@import "banner";
+@import "poubelle";
 @import "parallax";
 @import "card";
 @import "home-card";
@@ -11,15 +11,15 @@
 @import "card-product";
 @import "clickable";
 @import "notice";
-@import "pricing";
 @import "overview";
 @import "home";
 @import "button";
 @import "slideshow";
-@import "user";
 @import "nav";
 @import "forminline";
 @import "benevole";
+@import "container";
+@import "row";
 
 .text-center h1 {
   font-family: 'Roboto Slab', serif;
@@ -38,29 +38,6 @@
   margin-bottom: 20px;
 }
 
-.container {
-  justify-content: center;
-  margin-top: 30px;
-  max-width: 500px;
-}
-
-.row {
-  justify-content: center;
-  display: flex;
-  background: transparent;
-  padding: 20px;
-  margin-bottom: 30px;
-  margin: 30px;
-}
-
-.row1 {
-  justify-content: space-evenly;
-  display: flex;
-  background: transparent;
-  padding: 20px;
-  margin-bottom: 30px;
-  margin: 30px;
-}
 
 .typo {
   font-family: 'Roboto Slab', serif;

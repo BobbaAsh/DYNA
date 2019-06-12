@@ -1,52 +1,33 @@
 .home .container1 {
     position: relative;
-    top: 48%;
+    top: 40%;
     transform: translateY(-50%);
-    z-index: 5;
 }
 
-.container1 {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-div {
-    display: block;
-}
 
 .home h2 {
-    margin-bottom: 15px;
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: 300;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 
 .home h1 {
     margin-bottom: 15px;
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 60px;
     font-weight: 600;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }
 
 .home {
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("http://i.huffpost.com/gen/1658988/images/o-BURNING-MAN-NEVADA-facebook.jpg");
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
+    height: 90vh;
     background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-
 }
 
 .container-fullscreen {
