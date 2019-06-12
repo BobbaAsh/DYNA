@@ -17,7 +17,7 @@
             <h3><%= @event.name %></h3>
             <h4><%= link_to "#{participation.user.first_name}", user_path(participation.user) %></h4>
             <p><%= participation.wanted_status %></p>
-            <p><%= render 'adddocument', locals:{ event: @event, participation: participation, model: @document }  if participation.status == true   %></p>
+            <p><%= render partial: 'adddocument', locals:{ event: @event, participation: participation, document: @document }  if participation.status == true   %></p>
           </div>
           <div class="row">
             <% if participation.status == true %>

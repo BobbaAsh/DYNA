@@ -1,5 +1,5 @@
-<button type="button" data-toggle="modal" data-target="#exampleModal">Ajouter des documents</button>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<button type="button" data-toggle="modal" data-target="#modal-<%= participation.id %>">Ajouter des documents</button>
+  <div class="modal fade" id="modal-<%= participation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="modal-body">
-          <%= simple_form_for([locals[:event], locals[:participation], locals[:model]]) do |f| %>
+          <%= simple_form_for([event, participation, document]) do |f| %>
           <%= f.input :name, placeholder: "Nom du document"  %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
@@ -22,3 +22,5 @@
       </div>
     </div>
   </div>
+
+
