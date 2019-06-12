@@ -1,0 +1,30 @@
+.benevole h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: white;
+}
+
+
+.benevole h1 {
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: white;
+}
+
+.benevole {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("https://www.vrtxmag.com/site/assets/files/48948/01_travisscott_01.jpg");
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+}

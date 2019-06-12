@@ -8,21 +8,18 @@
             <h3><%= @event.name %></h3>
             <h4><%= link_to "#{participation.user.first_name}", user_path(participation.user) %></h4>
             <p><%= participation.wanted_status %></p>
-            <p><%= render 'adddocument', locals:{ participation: participation, model: @document }  if participation.status == true   %></p>
+            <p><%= render 'adddocument', locals:{ event: @event, participation: participation, model: @document }  if participation.status == true   %></p>
           </div>
           <div class="row">
             <% if participation.status == true %>
               <%= link_to "Acceptée", accept_event_participation_path(@event, participation), method: :patch,  class: "btn3" %>
-
-
-
             <% else %>
-            <%= link_to "Accepter", accept_event_participation_path(@event, participation), method: :patch, class: "btn btn-success" %>
+            <%= link_to "Accepter", accept_event_participation_path(@event, participation), method: :patch, class: "btn2 btn-success" %>
             <% end %>
             <% if participation.status == false %>
               <%= link_to "Refusée", decline_event_participation_path(@event, participation), method: :patch, class: "btn4" %>
             <% else %>
-              <%= link_to "Refuser", decline_event_participation_path(@event, participation), method: :patch, class: "btn btn-danger" %>
+              <%= link_to "Refuser", decline_event_participation_path(@event, participation), method: :patch, class: "btn2 btn-danger" %>
             <% end %>
           </div>
         </div>

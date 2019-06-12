@@ -1,68 +1,57 @@
 .home .container1 {
     position: relative;
-    top: 48%;
+    top: 40%;
     transform: translateY(-50%);
-    z-index: 5;
 }
 
-.container1 {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-div {
-    display: block;
-}
 
 .home h2 {
-    margin-bottom: 15px;
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: 300;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 
 .home h1 {
     margin-bottom: 15px;
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 60px;
     font-weight: 600;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.home {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("http://www.lesardentes.be/festival/sites/default/files/styles/4col/public/banner.jpg?itok=BcjMcevt");
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+
+}
+
+.home2 h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     margin: 0 0 20px 0;
     position: relative;
     z-index: 6;
     color: white;
 }
 
-.home {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("http://i.huffpost.com/gen/1658988/images/o-BURNING-MAN-NEVADA-facebook.jpg");
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-
-}
-
-.benevole {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("https://pbs.twimg.com/media/DlOvWjRUwAA3LoG.jpg");
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-}
-
-.benevole h2 {
+.home2 p {
     margin-bottom: 15px;
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 10px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     margin: 0 0 20px 0;
     position: relative;
@@ -71,7 +60,7 @@ div {
 }
 
 
-.benevole h1 {
+.home2 h1 {
     margin-bottom: 15px;
     font-size: 40px;
     line-height: 46px;
@@ -82,6 +71,69 @@ div {
     color: white;
 }
 
-.container-fullscreen {
-  min-height: calc(100vh - 210px);
+.home2 {
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+
 }
+
+.home3 h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: #3a3a3a;
+}
+
+.home3 h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: #3a3a3a;
+}
+
+
+.home3 h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: #c6ba95;
+}
+
+.home3 p {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    z-index: 6;
+    color: #3a3a3a;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    line-height: 3px;
+}
+
+.home3 {
+    padding: 150px 0;
+    padding-left: 300px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #c6ba95;
+}
+
+

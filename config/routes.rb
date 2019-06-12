@@ -46,6 +46,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+
+  get "participations/index_my_participation"
   resources :events do
     collection do
         get :index_manager
@@ -58,16 +60,15 @@ Rails.application.routes.draw do
       end
 
 
+    resources :documents, only: [:new, :create, :show, :index ]
+
+
     end
 
   end
 
-  resources :participations, only: [] do
-    collection do
-        get :index_my_participation
-      end
-    resources :documents, only: [:new, :create, :show, :index ]
-  end
+
+
 
   resources :status_assignations, only: [:create, :delete]
   resources :task_assignations, only: [:create, :delete]

@@ -7,7 +7,6 @@
     @document = Document.new
   end
 
-
   def index_my_participation
     @events = current_user.events
     @participations = Participation.where(user_id: current_user)
