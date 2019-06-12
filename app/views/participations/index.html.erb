@@ -13,16 +13,13 @@
           <div class="row">
             <% if participation.status == true %>
               <%= link_to "Acceptée", accept_event_participation_path(@event, participation), method: :patch,  class: "btn3" %>
-
-
-
             <% else %>
-            <%= link_to "Accepter", accept_event_participation_path(@event, participation), method: :patch, class: "btn btn-success" %>
+            <%= link_to "Accepter", accept_event_participation_path(@event, participation), method: :patch, class: "btn2 btn-success" %>
             <% end %>
             <% if participation.status == false %>
               <%= link_to "Refusée", decline_event_participation_path(@event, participation), method: :patch, class: "btn4" %>
             <% else %>
-              <%= link_to "Refuser", decline_event_participation_path(@event, participation), method: :patch, class: "btn btn-danger" %>
+              <%= link_to "Refuser", decline_event_participation_path(@event, participation), method: :patch, class: "btn2 btn-danger" %>
             <% end %>
           </div>
         </div>

@@ -7,7 +7,7 @@
     </div>
   </section>
   <% if current_user.job == "Bénévole" %>
-    <p class="text-center"> <%= link_to "Candidater", new_event_participation_path(@event), class: "btn btn-info" %></p>
+    <p class="text-center"> <%= link_to "Candidater", new_event_participation_path(@event), class: "btn2 btn-info" %></p>
   <% else %>
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -64,7 +64,7 @@
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       Contenu à updater
       </div>
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><p class="text-center"> <%= link_to "Voir les candidatures", event_participations_path(@event), class: "btn btn-info" %> </p></div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><p class="text-center"> <%= link_to "Voir les candidatures", event_participations_path(@event), class: "btn2 btn-info" %> </p></div>
     </div>
   <% end %>
 </div>
