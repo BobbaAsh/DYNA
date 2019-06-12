@@ -1,6 +1,4 @@
-<h1>Event#edit</h1>
-
- <div class="container">
+<div class="container">
     <%= simple_form_for(@event) do |f| %>
     <%= f.input :name, label: "Nom de l'évènement", placeholder: "Nom" %>
     <%= f.input :begin_date, label: "Date de début", placeholder: "jj/mm/aaaa" %>
@@ -12,10 +10,12 @@
       <%= f.check_box :visibility, id: "customSwitch1", class: "custom-control-input" %>
       <label class="custom-control-label" for="customSwitch1">Rendre mon evenement visible</label>
     </div>
-
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
-    <%= f.button :submit, class: "btn btn-info" %>
+    <div class="container6">
+    <%= f.button :submit, class: "btn2 btn-info" %>
     <% end %>
-  </div>
+    </div>
+</div>
+
 
