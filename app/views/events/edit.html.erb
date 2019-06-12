@@ -8,28 +8,14 @@
     <%= f.input :localisation, label: "Localisation", placeholder: "Adresse" %>
     <%= f.input :description, label: "Description", placeholder: "En quoi consiste ton évènement" %>
 
-    <%= f.input :visibility, label: "visibility", placeholder: "Visible?" %>
     <div class="custom-control custom-switch">
-     <input type="checkbox" class="custom-control-input" id="customSwitch1">
-     <label class="custom-control-label" for="customSwitch1">visibility</label>
+      <%= f.check_box :visibility, id: "customSwitch1", class: "custom-control-input" %>
+      <label class="custom-control-label" for="customSwitch1">Rendre mon evenement visible</label>
     </div>
->
+
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.button :submit, class: "btn btn-info" %>
     <% end %>
   </div>
-
-
-<script>
-
-  const customToggle = document.querySelector('.custom-switch');
-  const checkbox = document.querySelector('#event_visibility');
-
-  const selectCheckbox = () => {
-    console.log("test", document.querySelector('#event_visibility'));
-    document.querySelector('#event_visibility').click();
-  };
-  customToggle.addEventListener("click", selectCheckbox)
-</script>
 
