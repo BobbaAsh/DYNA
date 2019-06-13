@@ -5,7 +5,7 @@
         <h3>Pour quelle mission ?</h3>
           <%= simple_form_for [@event, @participation] do |f| %>
           <%= f.input :wanted_status, collection: ["Entrée" , "Entretien", "Prospectus", "Driver"] %>
-          <%= f.button :submit, new_event_participation_path, value: "Candidate", class: "btn2"  %>
+          <%= f.button :submit, new_event_participation_path, value: "Candidate", class: "btn2 btn-info"  %>
           <% end %>
       </div>
     </div>
