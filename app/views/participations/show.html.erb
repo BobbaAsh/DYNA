@@ -1,5 +1,5 @@
 <div class="container-fullscreen">
-    <section class="home">
+    <section class="home2" style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= cl_image_path @participation.event.photo %>) ;">
     <div class="container1">
       <% if @participation.status == true %>
         <h1>Félicitations <%= @participation.user.first_name %>,</h1>
