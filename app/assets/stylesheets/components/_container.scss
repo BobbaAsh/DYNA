@@ -161,3 +161,39 @@ section {
   text-align: left;
 }
 
+.container12 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.container12 h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.container12 h2 {
+  line-height: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.container12 p {
+  margin-top: 30px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 600px;
+  line-height: 30px;
+  color: white;
+  padding-left: 30px;
+  float:right;
+  text-align: right;
+}
+
+
