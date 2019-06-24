@@ -25,15 +25,12 @@
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <ul>
-
-           <% @artistes.where(event_id: @event).each do |artiste| %>
+          <% @artistes.where(event_id: @event).each do |artiste| %>
           <h2><strong><%= artiste.name %> </strong></h2>
           <% end %>
         </ul>
+        <%= link_to "Ajoutez un artiste", new_event_artiste_path(@event) , class: "btn2 btn-info" %> </p>
       </div>
-     <%= link_to "Ajoutez un artiste", new_event_artiste_path(@event) , class: "btn2 btn-info" %> </p>
-      </div>
-    </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <ul>
           <li><h1>France Boisson</h1>
