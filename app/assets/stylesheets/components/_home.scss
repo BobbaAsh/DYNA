@@ -4,16 +4,15 @@
     transform: translateY(-50%);
 }
 
-
-.home h2 {
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+.home {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2017/01/18165859/twenty20_2c31db48-c4c9-461d-8492-5f99516a493f.jpg");
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
 }
-
 
 .home h1 {
     margin-bottom: 15px;
@@ -24,15 +23,34 @@
     font-weight: 700;
 }
 
-.home {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("http://www.lesardentes.be/festival/sites/default/files/styles/4col/public/banner.jpg?itok=BcjMcevt");
-    height: 90vh;
+.home h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.home2 {
+    height: 80vh;
     overflow: hidden;
     position: relative;
     background-size: cover;
     background-position: center;
     padding: 150px 0;
 
+}
+
+.home2 h1 {
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: white;
 }
 
 .home2 h2 {
@@ -47,73 +65,6 @@
     color: white;
 }
 
-.home2 p {
-    margin-bottom: 15px;
-    font-size: 20px;
-    line-height: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
-    color: white;
-}
-
-
-.home2 h1 {
-    margin-bottom: 15px;
-    font-size: 40px;
-    line-height: 46px;
-    font-weight: 600;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
-    color: white;
-}
-
-.home2 {
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-
-}
-
-.home3 h2 {
-    margin-bottom: 15px;
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: 400;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
-    color: #3a3a3a;
-}
-
-.home3 h2 {
-    margin-bottom: 15px;
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: 400;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
-    color: #3a3a3a;
-}
-
-
-.home3 h1 {
-    margin-bottom: 15px;
-    font-size: 50px;
-    font-weight: 700;
-    margin: 0 0 20px 0;
-    position: relative;
-    z-index: 6;
-    color: #c6ba95;
-}
-
 
 .home3 {
     padding: 150px 0;
@@ -122,7 +73,7 @@
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    border: 1px solid #c6ba95;
+    background-color: #f4f4f4;
 }
 
 

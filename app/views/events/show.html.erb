@@ -7,7 +7,7 @@
       <h2> <%= "Du #{@event.begin_date} au #{@event.end_date} @ #{@event.localisation}" %> </h2>
       <p> <%= @event.description %> </p>
     </div>
-    <div class="container7">
+    <div class="container10">
       <% if current_user.job == "Bénévole" %>
         <p><%= render 'selectjob', locals:{ event: @event, model: @participation} %></p>
       <% end %>
@@ -25,6 +25,7 @@
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <ul>
+
            <% @artistes.where(event_id: @event).each do |artiste| %>
           <h2><strong><%= artiste.name %> </strong></h2>
           <% end %>

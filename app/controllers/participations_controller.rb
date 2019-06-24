@@ -16,10 +16,10 @@ class ParticipationsController < ApplicationController
     @participation = Participation.find(params[:id])
   end
 
-  def new
-    @participation = Participation.new
-    @event = Event.find(params[:event_id])
-  end
+  # def new
+  #   @participation = Participation.new
+  #   @event = Event.find(params[:event_id])
+  # end
 
   def accept
     @event = Event.find(params[:event_id])

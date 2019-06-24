@@ -1,5 +1,5 @@
 <div class="container-fullscreen">
-    <section class="home">
+    <section class="home2" style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= cl_image_path @participation.event.photo %>) ;">
     <div class="container1">
       <% if @participation.status == true %>
         <h1>Félicitations <%= @participation.user.first_name %>,</h1>
@@ -7,7 +7,7 @@
         <h2>au poste de <%= @participation.wanted_status %> </h2>
         <h2>Candidature acceptée</h2>
         <div class="container6">
-        <%= link_to "Documents à télécharger", event_participation_documents_path(@participation.event, @participation), class: "btn5 btn-info" %>
+        <%= link_to "Mes documents", event_participation_documents_path(@participation.event, @participation), class: "btn5 btn-info" %>
         </div>
       <%elsif @participation.status == false %>
         <h1>Désolé, <%= @participation.user.first_name %></h1>
