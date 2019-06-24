@@ -67,12 +67,12 @@ Rails.application.routes.draw do
 
   end
 
-
-
+  resources :events do
+     resources :artistes
+end
 
   resources :status_assignations, only: [:create, :delete]
   resources :task_assignations, only: [:create, :delete]
   resources :status, only: [:index, :create, :delete, :update]
   resources :tasks
-
 end

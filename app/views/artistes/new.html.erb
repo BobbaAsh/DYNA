@@ -1,0 +1,11 @@
+<div class="container-fullscreen">
+  <div class="container">
+    <%= simple_form_for ([@event, @artiste]) do |f| %>
+    <%= f.input :name, label: "Nom de l'artiste ou du groupe", placeholder: "Nom de l'artiste ou du groupe" %>
+    <%= f.input :price, label: "Prix", placeholder: "Prix" %>
+    <%= f.input :numberofmember, label: "Nombre de membre", placeholder: "Nombre de membre " %>
+    <%= f.input :contact, label: "Contact", placeholder: "Contact" %>
+    <%= f.button :submit, class: "btn2 btn-info" %>
+    <% end %>
+  </div>
+</div>

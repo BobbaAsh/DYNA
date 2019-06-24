@@ -25,48 +25,15 @@
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <ul>
-          <li><h1>Denzel Curry</h1>
-        <h4>présence confirmée</h4>
-        <p>contratDenzelCurry.jpg</p></li>
-          <li><h1>Money Maker Clan</h1>
-        <h4>présence confirmée</h4>
-        <p>contratmmc.jpg</p></li>
-          <li><h1>Future</h1>
-        <h4>présence confirmée</h4>
-        <p>contratFuture.jpg</p></li>
-          <li><h1>Billie Eilish</h1>
-        <h4>présence confirmée</h4>
-        <p>contratBillieEilish.jpg</p></li>
-        </ul>
-        <ul>
-          <li><h1>Bobba Ash</h1>
-        <h4>présence confirmée</h4>
-        <p>contratBobbaAsh.jpg</p></li>
-          <li><h1>Alicia Keys</h1>
-        <h4>présence confirmée</h4>
-        <p>contratAliciaKeys.jpg</p></li>
-          <li><h1>Asap Rocky</h1>
-        <h4>présence confirmée</h4>
-        <p>contratAsapRocky.jpg</p></li>
-          <li><h1>Nekfeu</h1>
-        <h4>présence confirmée</h4>
-        <p>contratNekfeu.jpg</p></li>
-        </ul>
-        <ul>
-          <li><h1>Laurent Garnier</h1>
-        <h4>confirmation requise</h4>
-        <p>contratLaurentGarnier.jpg</p></li>
-          <li><h1>JMK$</h1>
-        <h4>confirmation requise</h4>
-        <p>contratJMKS.jpg</p></li>
-          <li><h1>PLK</h1>
-        <h4>confirmation requise</h4>
-        <p>contratPLK.jpg</p></li>
-          <li><h1>PNL</h1>
-        <h4>confirmation requise</h4>
-        <p>contratPNL.jpg</p></li>
+
+           <% @artistes.where(event_id: @event).each do |artiste| %>
+          <h2><strong><%= artiste.name %> </strong></h2>
+          <% end %>
         </ul>
       </div>
+     <%= link_to "Ajoutez un artiste", new_event_artiste_path(@event) , class: "btn2 btn-info" %> </p>
+      </div>
+    </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <ul>
           <li><h1>France Boisson</h1>
@@ -91,7 +58,8 @@
         <p>contactramentafraise.jpg</p></li>
         </ul>
       </div>
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><p class="text-center"> <%= link_to "Voir les candidatures", event_participations_path(@event), class: "btn2 btn-info" %> </p></div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><p class="text-center">
+        <%= link_to "Voir les candidatures", event_participations_path(@event), class: "btn2 btn-info" %> </p></div>
     </div>
   <% end %>
 </div>
