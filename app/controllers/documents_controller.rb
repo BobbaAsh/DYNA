@@ -12,6 +12,7 @@ class DocumentsController < ApplicationController
   def new
     @document = Document.new
     @participation = Participation.find(params[:participation_id])
+    @artiste = Artiste.find(params[:artiste_id])
   end
 
   def create
@@ -19,13 +20,22 @@ class DocumentsController < ApplicationController
     @document = Document.new(documents_params)
     @document.participation_id = @participation.id
     @event = @participation.event
-
     if @document.save
       redirect_to event_participations_path(@event)
     else
-    render :new
+      render :new
     end
+  end
 
+  def create_artiste
+    @artiste = Artiste.find(params[:artiste_id])
+    @document = Document.new(documents_params)
+    @document.artiste_id = @artiste.id
+    @event = @artiste.event
+    if @document.save
+      redirect_to event_artiste_path(@event)
+    else render :new
+    end
   end
 
   def edit
@@ -38,8 +48,7 @@ class DocumentsController < ApplicationController
   def delete
   end
 
-
-private
+  private
 
   def documents_params
     params.require(:document).permit(:name, :url, :photo, )

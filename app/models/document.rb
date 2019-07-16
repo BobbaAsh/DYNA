@@ -4,5 +4,5 @@ class Document < ApplicationRecord
   # belongs_to :user
   belongs_to :participation
   mount_uploader :photo, PhotoUploader
+  belongs_to :artiste
 end
-
