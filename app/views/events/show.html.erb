@@ -4,7 +4,7 @@
       <h1><%= @event.name %> </h1>
 
 
-      <h2> <%= "Du #{@event.begin_date} au #{@event.end_date} @ #{@event.localisation}" %> </h2>
+      <h2> <%= "Du #{@event.begin_date} au #{@event.end_date} @#{@event.localisation}" %> </h2>
       <p> <%= @event.description %> </p>
     </div>
     <div class="container10">
@@ -29,7 +29,7 @@
           <h2><strong><%= link_to artiste.name, event_artiste_path(@event) %> </strong></h2>
           <% end %>
 
-   <%= link_to "Ajoutez un artiste", new_event_artiste_path(@event) , class: "btn2 btn-info" %>
+   <%= link_to "Ajouter un artiste", new_event_artiste_path(@event) , class: "btn2 btn-info" %>
       </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <ul>
