@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :prestataires, path: 'pr'
   # get 'status/new'
   # get 'status/create'
   # get 'status/delete'
