@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_101720) do
+ActiveRecord::Schema.define(version: 2019_07_16_135923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "artistes", force: :cascade do |t|
+  create_table "artistemanagers", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.float "price"
-    t.integer "numberofmember"
-    t.string "contact"
-    t.bigint "event_id"
-    t.index ["event_id"], name: "index_artistes_on_event_id"
+    t.index ["email"], name: "index_artistemanagers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_artistemanagers_on_reset_password_token", unique: true
   end
 
   create_table "documents", force: :cascade do |t|
@@ -33,8 +34,6 @@ ActiveRecord::Schema.define(version: 2019_06_25_101720) do
     t.string "url"
     t.string "photo"
     t.bigint "participation_id"
-    t.bigint "artiste_id"
-    t.index ["artiste_id"], name: "index_documents_on_artiste_id"
     t.index ["participation_id"], name: "index_documents_on_participation_id"
   end
 
@@ -111,8 +110,6 @@ ActiveRecord::Schema.define(version: 2019_06_25_101720) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "artistes", "events"
-  add_foreign_key "documents", "artistes"
   add_foreign_key "documents", "participations"
   add_foreign_key "events", "users"
   add_foreign_key "participations", "events"
