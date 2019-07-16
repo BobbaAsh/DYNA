@@ -1,0 +1,8 @@
+<div class="container-fullscreen">
+  <section class="home2" style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url() ;">
+    <div class="container1">
+      <h2><strong><%= @artiste.name %> </strong></h2>
+    </div>
+           <p><%= render partial: 'adddocumentartiste', locals:{ event: @event, artiste: @artiste, document: @document }  %></p>
+  </section>
+</div>

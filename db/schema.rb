@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_100922) do
+ActiveRecord::Schema.define(version: 2019_06_25_101720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2019_06_24_100922) do
     t.string "url"
     t.string "photo"
     t.bigint "participation_id"
+    t.bigint "artiste_id"
+    t.index ["artiste_id"], name: "index_documents_on_artiste_id"
     t.index ["participation_id"], name: "index_documents_on_participation_id"
   end
 
@@ -110,6 +112,7 @@ ActiveRecord::Schema.define(version: 2019_06_24_100922) do
   end
 
   add_foreign_key "artistes", "events"
+  add_foreign_key "documents", "artistes"
   add_foreign_key "documents", "participations"
   add_foreign_key "events", "users"
   add_foreign_key "participations", "events"

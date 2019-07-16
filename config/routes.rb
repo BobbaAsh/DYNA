@@ -46,7 +46,6 @@ Rails.application.routes.draw do
 
   resources :users
 
-
   get "participations/index_my_participation"
   resources :events do
     collection do
@@ -58,13 +57,16 @@ Rails.application.routes.draw do
         patch :accept
         patch :decline
       end
-
+      end
 
     resources :documents, only: [:new, :create, :show, :index ]
 
 
-    end
 
+  resources :artistes do
+  post "/documents"=> "documents#create_artiste"
+        resources :documents, only: [:new, :create_artiste, :show, :index]
+    end
   end
 
   resources :events do

@@ -4,7 +4,9 @@ class ArtistesController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:event_id])
     @artiste = Artiste.find(params[:id])
+    @document = Document.new
   end
 
   def new
