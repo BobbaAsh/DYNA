@@ -12,9 +12,9 @@ class EventsController < ApplicationController
   end
 
   def show
+    @artiste = Artiste.find(params[:id])
     @event = Event.find(params[:id])
     @participation = Participation.new
-
     @artistes = Artiste.all
     @participation.user = current_user
   end
