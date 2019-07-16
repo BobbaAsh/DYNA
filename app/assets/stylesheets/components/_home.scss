@@ -76,4 +76,36 @@
     background-color: #f4f4f4;
 }
 
+.home4 {
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+
+}
+
+.home4 h1 {
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: white;
+}
+
+.home4 h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 6;
+    color: white;
+}
 
